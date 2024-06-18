@@ -40,6 +40,7 @@ namespace GameScene
         public Material falling_left;
 
         [Header("Attack")]
+        public PlayerAttack playeratak;
         public Animator swordTrail;
         public int attackCounter;
         public Material playerAttack_right;
@@ -80,6 +81,8 @@ namespace GameScene
 
         void Start()
         {
+            playeratak = gameObject.GetComponent<PlayerAttack>();
+
             IsFacingRight = true;
 
             IsFalling = false;
@@ -127,7 +130,16 @@ namespace GameScene
 
         public void Strafe()
         {
-            float movement = Input.GetAxis("Horizontal");
+            float movement;
+            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)) && !playeratak.IsAttacking)
+            {
+                movement = Input.GetAxis("Horizontal");
+            }
+            else
+            {
+                movement = 0.0f;
+            }
+
             if (IsMoving)
             {
                 rb.velocity = new Vector2(movement * speed, rb.velocity.y);
@@ -382,7 +394,14 @@ namespace GameScene
             animator.SetBool("OnWall", onWall);
         }
 
-
+        public void startAttack2Right_Trail()
+        {
+            swordTrail.SetBool("Attack2Right_Trail", true);
+        }
+        public void startAttack2Left_Trail()
+        {
+            swordTrail.SetBool("Attack2Left_Trail", true);
+        }
     }
 }
 

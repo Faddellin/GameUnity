@@ -84,4 +84,12 @@ public class PlayerAttack : MonoBehaviour
     {
         Gizmos.DrawWireSphere(attackTransform.position,attackRange);
     }
+    public void startAttack2_Trail()
+    {
+        _player.swordTrail.SetBool("Attack2_Trail", true);
+    }
+    public void stopAttack2_Trail()
+    {
+        _player.swordTrail.SetBool("Attack2_Trail", false);
+    }
 }

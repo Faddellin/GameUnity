@@ -354,7 +354,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -396,6 +396,7 @@ MonoBehaviour:
   jump_left: {fileID: 2100000, guid: f2e5602477bfc8748b49f1e915532932, type: 2}
   falling_right: {fileID: 2100000, guid: 0f7d8aed903a7d246ad8dbead6bca910, type: 2}
   falling_left: {fileID: 2100000, guid: c1d689c55d449404f929252837b8b73a, type: 2}
+  playeratak: {fileID: 0}
   swordTrail: {fileID: 1499826780}
   attackCounter: 1
   playerAttack_right: {fileID: 2100000, guid: f33fcfdaf6330244db9e04ee05f635fb, type: 2}
@@ -1905,11 +1906,11 @@ Light:
   m_GameObject: {fileID: 1468451661}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 2
+  m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.98490566, g: 0.96918684, b: 0.8455322, a: 1}
   m_Intensity: 3
-  m_Range: 1000
+  m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1967,7 +1968,7 @@ Transform:
   m_GameObject: {fileID: 1468451661}
   serializedVersion: 2
   m_LocalRotation: {x: 0.4116116, y: -0.2258835, z: 0.1045516, w: 0.8767107}
-  m_LocalPosition: {x: -0.56, y: 48.86, z: 3}
+  m_LocalPosition: {x: -0.56, y: 31.2, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1984,6 +1985,7 @@ GameObject:
   - component: {fileID: 1499826779}
   - component: {fileID: 1499826781}
   - component: {fileID: 1499826780}
+  - component: {fileID: 1499826782}
   m_Layer: 10
   m_Name: PlayerCopy
   m_TagString: Untagged
@@ -2067,18 +2069,30 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.24, y: 1.44}
+  m_Size: {x: 2.24, y: 1.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1499826782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499826778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce058b7b5b802a349a68424040de19a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1729676096
 GameObject:
   m_ObjectHideFlags: 0

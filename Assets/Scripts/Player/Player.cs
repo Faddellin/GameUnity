@@ -29,24 +29,11 @@ namespace GameScene
         public Sprite fullHeart;
         public Sprite emptyHeart;
 
-       [Header("Materials")]
-        public Material running_left;
-        public Material running_right;
-        public Material idle_right;
-        public Material idle_left;
-        public Material jump_right;
-        public Material jump_left;
-        public Material falling_right;
-        public Material falling_left;
 
         [Header("Attack")]
         public PlayerAttack playeratak;
         public Animator swordTrail;
         public int attackCounter;
-        public Material playerAttack_right;
-        public Material second_Attack_right;
-        public Material playerAttack_left;
-        public Material second_Attack_left;
 
 
         public Animator animator;
@@ -54,8 +41,8 @@ namespace GameScene
         public GameObject cameraFollowGo;
 
         [Header("Main Settings")]
-        public Rigidbody2D rb;
-        public SpriteRenderer sr;
+        public  Rigidbody2D rb;
+        public  SpriteRenderer sr;
 
         [Header("Cameras")]
         private FollowingCameraObject followingCamera;
@@ -77,6 +64,13 @@ namespace GameScene
         public Transform wallCheckDown;
         public Vector2 boxSize;
 
+        [Header("OnGround/Wall")]
+        public bool onGround;
+        public Transform GroundCheck;
+        public Vector2 size = new Vector2(2.0f, 1.0f);
+        public float angle = 0.0f;
+        public LayerMask Ground;
+        public LayerMask Wall;
 
 
         void Start()
@@ -171,41 +165,6 @@ namespace GameScene
             followingCamera.CallTurn();
         }
 
-        public void Idle()
-        {
-            if(IsFacingRight)
-            {
-                sr.sharedMaterial = idle_right;
-            }
-            else
-            {
-                sr.sharedMaterial = idle_left;
-            }
-        }
-
-        public void RunningAnim()
-        {
-            if (IsFacingRight)
-            {
-                sr.sharedMaterial = running_right;
-            }
-            else
-            {
-                sr.sharedMaterial = running_left;
-            }
-        }
-
-        public void JumpAnimation()
-        {
-            if (IsFacingRight)
-            {
-                sr.sharedMaterial = jump_right;
-            }
-            else
-            {
-                sr.sharedMaterial= jump_left;
-            }
-        }
 
         public void Jump()
         {
@@ -234,28 +193,6 @@ namespace GameScene
             animator.SetBool("IsFalling", IsFalling);
         }
 
-        public void FallingAnimation()
-        {
-            if (IsFalling)
-            {
-                if (IsFacingRight)
-                {
-                    sr.sharedMaterial = falling_right;
-                }
-
-                else
-                {
-                    sr.sharedMaterial = falling_left;
-                }
-            }
-        }
-
-        public bool onGround;
-        public Transform GroundCheck;
-        public Vector2 size = new Vector2(2.0f, 1.0f);
-        public float angle = 0.0f;
-        public LayerMask Ground;
-        public LayerMask Wall;
 
         void CheckingGround()
         {
@@ -359,35 +296,6 @@ namespace GameScene
             canDash = true;
         }
 
-        public void A()
-        {
-            if (IsFacingRight)
-            {
-                switch (attackCounter)
-                {
-                    case 1:
-                        sr.sharedMaterial = playerAttack_right;
-                        break;
-                    case 2:
-                        sr.sharedMaterial = second_Attack_right;
-                        attackCounter = 0;
-                        break;
-                }
-            }
-            else
-            {
-                switch (attackCounter)
-                {
-                    case 1:
-                        sr.sharedMaterial = playerAttack_left;
-                        break;
-                    case 2:
-                        sr.sharedMaterial = second_Attack_left;
-                        attackCounter = 0;
-                        break;
-                }
-            }
-        }
         public void CheckingWall()
         {
             onWall = (Physics2D.OverlapBox(wallCheckUp.position, boxSize, angle, Wall) && Physics2D.OverlapBox(wallCheckDown.position, boxSize, angle, Wall));
@@ -409,7 +317,6 @@ namespace GameScene
 
         private IEnumerator WallJump()
         {
-            Debug.Log("Wall Jump");
             canWallJump = false;
             IsMoving = false;
             rb.AddForce(new Vector2(-(Convert.ToInt32(IsFacingRight) * 2 - 1)*jumpForce*0.9f, jumpForce - rb.velocity.y * rb.mass), ForceMode2D.Impulse);
@@ -420,21 +327,6 @@ namespace GameScene
             yield return new WaitForSeconds(wallJumpCooldown-0.1f);
             canWallJump = true;
             extraJumps = 1;
-            
-           
-        }
-
-        public void startAttack2Right_Trail()
-        {
-            swordTrail.SetBool("Attack2Right_Trail", true);
-        }
-        public void startAttack2Left_Trail()
-        {
-            swordTrail.SetBool("Attack2Left_Trail", true);
-        }
-        public void startAttack1Right_Trail()
-        {
-            swordTrail.SetBool("Attack1Right_Trail", true);
         }
     }
 }

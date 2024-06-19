@@ -47,7 +47,7 @@ public class PlayerAttack : MonoBehaviour
         IsAttacking = true;
         _player.animator.SetBool("IsAttacking", IsAttacking);
 
-        if (_player.attackCounter > 2)
+        if (_player.attackCounter >= 2)
         {
             _player.attackCounter = 0;
         }

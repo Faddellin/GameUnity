@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 384543453}
   - component: {fileID: 384543456}
   - component: {fileID: 384543457}
+  - component: {fileID: 384543458}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -272,7 +273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384543449}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.8, y: 12.8, z: 0}
   m_LocalScale: {x: 3.1485, y: 3.1485, z: 3.1485}
   m_ConstrainProportionsScale: 0
@@ -388,21 +389,9 @@ MonoBehaviour:
   - {fileID: 852642611}
   fullHeart: {fileID: 21300000, guid: 4c23f0270188eae40bf3c49d9ada70b3, type: 3}
   emptyHeart: {fileID: 21300000, guid: b0bd96f3be2b74d45a1cd84eb5a2c666, type: 3}
-  running_left: {fileID: 2100000, guid: 8415c365c50e11a44ac4c771f9a92cf8, type: 2}
-  running_right: {fileID: 2100000, guid: 2322405308b26854b936766b421a87ca, type: 2}
-  idle_right: {fileID: 2100000, guid: b6d514e39873c3a42a38b2614cf36f23, type: 2}
-  idle_left: {fileID: 2100000, guid: c477c3a7b8abf96438d0b5f06a3d533b, type: 2}
-  jump_right: {fileID: 2100000, guid: 85826ee857b108f4a81a60046d1bd31d, type: 2}
-  jump_left: {fileID: 2100000, guid: f2e5602477bfc8748b49f1e915532932, type: 2}
-  falling_right: {fileID: 2100000, guid: 0f7d8aed903a7d246ad8dbead6bca910, type: 2}
-  falling_left: {fileID: 2100000, guid: c1d689c55d449404f929252837b8b73a, type: 2}
   playeratak: {fileID: 0}
   swordTrail: {fileID: 1499826780}
   attackCounter: 1
-  playerAttack_right: {fileID: 2100000, guid: f33fcfdaf6330244db9e04ee05f635fb, type: 2}
-  second_Attack_right: {fileID: 2100000, guid: afc50b8cdfe9a0d4595fcef82d5793ef, type: 2}
-  playerAttack_left: {fileID: 2100000, guid: 5e5471890898bcd428c1a87bcb88aa46, type: 2}
-  second_Attack_left: {fileID: 2100000, guid: 3a123832ad3adc44695d28375b2c614a, type: 2}
   animator: {fileID: 0}
   cameraFollowGo: {fileID: 267453615}
   rb: {fileID: 0}
@@ -412,7 +401,7 @@ MonoBehaviour:
   canDash: 0
   dashPower: 10
   dashingTime: 0.2
-  dashCooldown: 2
+  dashCooldown: 0.3
   onWall: 0
   wallCheckUp: {fileID: 523213353}
   wallCheckDown: {fileID: 1393523610}
@@ -424,8 +413,11 @@ MonoBehaviour:
   Ground:
     serializedVersion: 2
     m_Bits: 64
+  Wall:
+    serializedVersion: 2
+    m_Bits: 4096
   canWallJump: 1
-  wallJumpCooldown: 1
+  wallJumpCooldown: 0.7
 --- !u!114 &384543456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,7 +439,7 @@ MonoBehaviour:
   _playerTransform: {fileID: 384543452}
   IsFacingRight: 0
   IsAttacking: 0
-  attackingTime: 0.35
+  attackingTime: 0.2
   canAttack: 0
 --- !u!114 &384543457
 MonoBehaviour:
@@ -464,6 +456,31 @@ MonoBehaviour:
   gun: {fileID: 1903905288}
   bullet: {fileID: 8889900904945285228, guid: 85684cb56620a1743bc3ef480c150df9, type: 3}
   bulletSpawnPoint: {fileID: 0}
+--- !u!114 &384543458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384543449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529434ffabbfd1a4ab055968f5ced6eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 384543452}
+  running_left: {fileID: 2100000, guid: 8415c365c50e11a44ac4c771f9a92cf8, type: 2}
+  running_right: {fileID: 2100000, guid: 2322405308b26854b936766b421a87ca, type: 2}
+  idle_right: {fileID: 2100000, guid: b6d514e39873c3a42a38b2614cf36f23, type: 2}
+  idle_left: {fileID: 2100000, guid: c477c3a7b8abf96438d0b5f06a3d533b, type: 2}
+  jump_right: {fileID: 2100000, guid: 85826ee857b108f4a81a60046d1bd31d, type: 2}
+  jump_left: {fileID: 2100000, guid: f2e5602477bfc8748b49f1e915532932, type: 2}
+  falling_right: {fileID: 2100000, guid: 0f7d8aed903a7d246ad8dbead6bca910, type: 2}
+  falling_left: {fileID: 2100000, guid: c1d689c55d449404f929252837b8b73a, type: 2}
+  playerAttack_right: {fileID: 2100000, guid: f33fcfdaf6330244db9e04ee05f635fb, type: 2}
+  second_Attack_right: {fileID: 2100000, guid: afc50b8cdfe9a0d4595fcef82d5793ef, type: 2}
+  playerAttack_left: {fileID: 2100000, guid: 5e5471890898bcd428c1a87bcb88aa46, type: 2}
+  second_Attack_left: {fileID: 2100000, guid: 3a123832ad3adc44695d28375b2c614a, type: 2}
 --- !u!1 &438321477
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,7 +971,7 @@ GameObject:
   - component: {fileID: 837060453}
   - component: {fileID: 837060452}
   - component: {fileID: 837060451}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Square
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1067,8 +1084,8 @@ Transform:
   m_GameObject: {fileID: 837060450}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8, y: 62.4, z: 0}
-  m_LocalScale: {x: 1, y: 100, z: 1}
+  m_LocalPosition: {x: -0.5, y: 61.6, z: 0}
+  m_LocalScale: {x: 0.9807, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1410,7 +1427,7 @@ GameObject:
   - component: {fileID: 1067560499}
   - component: {fileID: 1067560498}
   - component: {fileID: 1067560497}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Square (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}

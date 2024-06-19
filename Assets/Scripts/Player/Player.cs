@@ -71,16 +71,18 @@ namespace GameScene
         public float dashingTime = 0.2f;
         public float dashCooldown = 1f;
 
-        [Header("WallClimbing")]
+        [Header("WallJump")]
         public bool onWall;
         public Transform wallCheckUp;
         public Transform wallCheckDown;
-        public Vector2 boxSize = new Vector2(2.0f, 1.0f);
+        public Vector2 boxSize;
 
 
 
         void Start()
         {
+            boxSize = wallCheckUp.GetComponent<BoxCollider2D>().size;
+
             playeratak = gameObject.GetComponent<PlayerAttack>();
 
             IsFacingRight = true;
@@ -105,15 +107,15 @@ namespace GameScene
         private void FixedUpdate()
         {
             CheckingGround();
-            CheckingWall();
+            
         }
         void Update()
         {
             Strafe();
             Jump();
             testDamage();
-
-            boxSize = GetComponent<BoxCollider2D>().size;
+            WallJumpActivation();
+            CheckingWall();
 
             if (rb.velocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
             {
@@ -145,28 +147,28 @@ namespace GameScene
                 rb.velocity = new Vector2(movement * speed, rb.velocity.y);
                 DashActivation();
                 animator.SetFloat("Speed", Mathf.Abs(movement));
-                swordTrail.SetFloat("Speed", Mathf.Abs(movement));
+                
                 if (movement < 0 && IsFacingRight)
                 {
-                    _playerArms.transform.localPosition = new Vector3(-_playerArms.transform.localPosition.x, _playerArms.transform.localPosition.y, _playerArms.transform.localPosition.z);
-                    _attackArea.transform.localPosition = new Vector3(-_attackArea.transform.localPosition.x, _attackArea.transform.localPosition.y, _attackArea.transform.localPosition.z);
-                    IsFacingRight = false;
-                    animator.SetBool("IsRight", false);
-                    swordTrail.SetBool("IsRight", false);
-                    followingCamera.CallTurn();
-
+                    Flip();
                 }
 
                 if (movement > 0 && !IsFacingRight)
                 {
-                    _playerArms.transform.localPosition = new Vector3(-_playerArms.transform.localPosition.x, _playerArms.transform.localPosition.y, _playerArms.transform.localPosition.z);
-                    _attackArea.transform.localPosition = new Vector3(-_attackArea.transform.localPosition.x, _attackArea.transform.localPosition.y, _attackArea.transform.localPosition.z);
-                    IsFacingRight = true;
-                    animator.SetBool("IsRight", true);
-                    swordTrail.SetBool("IsRight", true);
-                    followingCamera.CallTurn();
+                    Flip();
                 }
             }
+        }
+
+        public void Flip()
+        {
+            wallCheckUp.transform.localPosition = new Vector3(-wallCheckUp.transform.localPosition.x, wallCheckUp.transform.localPosition.y, wallCheckUp.transform.localPosition.z);
+            wallCheckDown.transform.localPosition = new Vector3(-wallCheckDown.transform.localPosition.x, wallCheckDown.transform.localPosition.y, wallCheckDown.transform.localPosition.z);
+            _playerArms.transform.localPosition = new Vector3(-_playerArms.transform.localPosition.x, _playerArms.transform.localPosition.y, _playerArms.transform.localPosition.z);
+            _attackArea.transform.localPosition = new Vector3(-_attackArea.transform.localPosition.x, _attackArea.transform.localPosition.y, _attackArea.transform.localPosition.z);
+            IsFacingRight = !IsFacingRight;
+            animator.SetBool("IsRight", IsFacingRight);
+            followingCamera.CallTurn();
         }
 
         public void Idle()
@@ -212,7 +214,7 @@ namespace GameScene
                 rb.AddForce(new Vector2(0, jumpForce - rb.velocity.y*rb.mass), ForceMode2D.Impulse);
                 extraJumps--;
             }
-            else if(Input.GetKeyDown(KeyCode.Space) && extraJumps == 0 && onGround)
+            else if(Input.GetKeyDown(KeyCode.Space) && onGround)
             {
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             }
@@ -230,7 +232,6 @@ namespace GameScene
                 rb.gravityScale = commonGravityScale;
             }
             animator.SetBool("IsFalling", IsFalling);
-            swordTrail.SetBool("IsFalling", IsFalling);
         }
 
         public void FallingAnimation()
@@ -254,6 +255,7 @@ namespace GameScene
         public Vector2 size = new Vector2(2.0f, 1.0f);
         public float angle = 0.0f;
         public LayerMask Ground;
+        public LayerMask Wall;
 
         void CheckingGround()
         {
@@ -262,16 +264,15 @@ namespace GameScene
             {
                 Falling();
                 animator.SetBool("Jump", !onGround);
-                swordTrail.SetBool("Jump", !onGround);
+                
             }
-            else
+            else if(onGround)
             {
                 IsFalling = false;
                 extraJumps = 1;
                 animator.SetBool("IsFalling", IsFalling);
                 animator.SetBool("Jump", !onGround);
-                swordTrail.SetBool("Jump", !onGround);
-                swordTrail.SetBool("IsFalling", IsFalling);
+                
             }
             
         }
@@ -287,11 +288,11 @@ namespace GameScene
             Gizmos.color = Color.red;
 
             // Создаем матрицу трансформации для поворота и перемещения бокса
-            Matrix4x4 rotationMatrix = Matrix4x4.TRS(GroundCheck.position, Quaternion.Euler(0, 0, angle), Vector3.one);
+            Matrix4x4 rotationMatrix = Matrix4x4.TRS(wallCheckUp.position, Quaternion.Euler(0, 0, angle), Vector3.one);
             Gizmos.matrix = rotationMatrix;
 
             // Рисуем проволочный куб (бокс)
-            Gizmos.DrawWireCube(Vector3.zero, size);
+            Gizmos.DrawWireCube(Vector3.zero, boxSize);
 
             // Сбрасываем матрицу трансформации Gizmos
             Gizmos.matrix = Matrix4x4.identity;
@@ -350,7 +351,7 @@ namespace GameScene
             IsMoving = false;
             float originalGravity = rb.gravityScale;
             rb.gravityScale = 0f;
-            rb.velocity = new Vector2((Convert.ToInt32(IsFacingRight) * 2 - 1)*transform.localScale.x * dashPower, 0f);
+            rb.velocity = new Vector2((Convert.ToInt32(IsFacingRight) * 2 - 1) * transform.localScale.x * dashPower, 0f);
             yield return new WaitForSeconds(dashingTime);
             rb.gravityScale = originalGravity;
             IsMoving = true;
@@ -387,11 +388,40 @@ namespace GameScene
                 }
             }
         }
-
         public void CheckingWall()
         {
-            onWall = (Physics2D.OverlapBox(wallCheckUp.position, boxSize, angle, Ground)&& Physics2D.OverlapBox(wallCheckDown.position, boxSize, angle, Ground));
+            onWall = (Physics2D.OverlapBox(wallCheckUp.position, boxSize, angle, Wall) && Physics2D.OverlapBox(wallCheckDown.position, boxSize, angle, Wall));
             animator.SetBool("OnWall", onWall);
+           
+        }
+
+        public void WallJumpActivation()
+        {
+            if (!onGround && onWall && Input.GetKeyDown(KeyCode.Space) && canWallJump)
+            {
+
+                StartCoroutine(WallJump());
+            }
+        }
+
+        public bool canWallJump;
+        public float wallJumpCooldown;
+
+        private IEnumerator WallJump()
+        {
+            Debug.Log("Wall Jump");
+            canWallJump = false;
+            IsMoving = false;
+            rb.AddForce(new Vector2(-(Convert.ToInt32(IsFacingRight) * 2 - 1)*jumpForce*0.9f, jumpForce - rb.velocity.y * rb.mass), ForceMode2D.Impulse);
+            Flip();
+            animator.SetBool("IsRight", IsFacingRight);
+            yield return new WaitForSeconds(0.18f);
+            IsMoving = true;
+            yield return new WaitForSeconds(wallJumpCooldown-0.1f);
+            canWallJump = true;
+            extraJumps = 1;
+            
+           
         }
 
         public void startAttack2Right_Trail()

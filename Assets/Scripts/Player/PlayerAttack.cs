@@ -46,7 +46,6 @@ public class PlayerAttack : MonoBehaviour
         canAttack = false;
         IsAttacking = true;
         _player.animator.SetBool("IsAttacking", IsAttacking);
-        _player.swordTrail.SetBool("IsAttacking", IsAttacking);
 
         if (_player.attackCounter > 2)
         {
@@ -61,8 +60,6 @@ public class PlayerAttack : MonoBehaviour
 
         _player.attackCounter++;
         _player.animator.SetInteger("AttackCounter", _player.attackCounter);
-        _player.swordTrail.SetBool("IsAttacking", IsAttacking);
-        _player.swordTrail.SetInteger("AttackCounter", _player.attackCounter);
     }
 
     public void check()

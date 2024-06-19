@@ -16,7 +16,7 @@ public class FollowingCameraObject : MonoBehaviour
 
     private Coroutine _turnCoroutine;
 
-    private Player _player;
+    private Player _player; 
 
     private bool _isFacingRight;
         

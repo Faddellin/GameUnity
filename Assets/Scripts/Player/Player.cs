@@ -432,6 +432,10 @@ namespace GameScene
         {
             swordTrail.SetBool("Attack2Left_Trail", true);
         }
+        public void startAttack1Right_Trail()
+        {
+            swordTrail.SetBool("Attack1Right_Trail", true);
+        }
     }
 }
 

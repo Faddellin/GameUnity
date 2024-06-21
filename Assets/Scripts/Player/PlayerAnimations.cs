@@ -24,22 +24,25 @@ public class PlayerAnimations : MonoBehaviour
         sr = player.GetComponent<SpriteRenderer>();
     }
 
-    [Header("Materials")]
+    [Header("Materials Left")]
     public Material running_left;
-    public Material running_right;
-    public Material idle_right;
     public Material idle_left;
-    public Material jump_right;
     public Material jump_left;
-    public Material falling_right;
     public Material falling_left;
-    public Material playerAttack_right;
-    public Material second_Attack_right;
     public Material playerAttack_left;
     public Material second_Attack_left;
     public Material forth_Attack_left;
-    public Material forth_Attack_right;
+    public Material third_Attack_left;
 
+    [Header("Materials Right")]
+    public Material running_right;
+    public Material idle_right;
+    public Material jump_right;
+    public Material falling_right;
+    public Material playerAttack_right;
+    public Material second_Attack_right;
+    public Material forth_Attack_right;
+    public Material third_Attack_right;
     private void Update()
     {
         IsFacingRight = player.IsFacingRight;
@@ -107,6 +110,9 @@ public class PlayerAnimations : MonoBehaviour
                     sr.sharedMaterial = second_Attack_right;
                     attackCounter = 0;
                     break;
+                case 2:
+                    sr.sharedMaterial = third_Attack_right;
+                    break;
                 case 3:
                     sr.sharedMaterial = playerAttack_right;
                     break;
@@ -122,6 +128,9 @@ public class PlayerAnimations : MonoBehaviour
                 case 1:
                     sr.sharedMaterial = second_Attack_left;
                     attackCounter = 0;
+                    break;
+                case 2:
+                    sr.sharedMaterial = third_Attack_left;
                     break;
                 case 3:
                     sr.sharedMaterial = playerAttack_left;

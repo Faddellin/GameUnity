@@ -18,6 +18,7 @@ public class PlayerAttack : MonoBehaviour
     private Player _player;
     public bool IsFacingRight;
     public bool IsAttacking;
+    private bool attackDelay;
 
     public float attackingTime;
     public bool canAttack;
@@ -26,6 +27,7 @@ public class PlayerAttack : MonoBehaviour
     {
         IsAttacking = false;
         canAttack = true;
+        attackDelay = false;
     }
     private void Awake()
     {
@@ -35,10 +37,21 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) && canAttack)
+        if ((Input.GetMouseButtonDown(0) && canAttack) ||(!IsAttacking && attackDelay))
         {
            StartCoroutine(Attack());
         }
+        if (Input.GetMouseButtonDown(0))
+        {
+            StartCoroutine(AttackDelay());
+        }
+    }
+
+    private IEnumerator AttackDelay()
+    {
+        attackDelay= true;
+        yield return new WaitForSeconds(0.1f);
+        attackDelay = false;
     }
 
     private IEnumerator Attack()

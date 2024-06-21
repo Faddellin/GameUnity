@@ -6,20 +6,25 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Patroler : MonoBehaviour
 {
-    [Header("EnemyMoving")]
+    [Header("EnemyBehavior")]
     public float Speed;
     public int RadiusOfPatrol;
+
     public Transform Point;
     private Animator animator;
 
     bool MovingRight;
-
     Transform Player;
+
     public float StoppingDistance;
+
     private float prevX;
     private float curX;
+
     public bool faceRight;
     public bool isAttacking;
+    public int attackCounter;
+
     public float AttackEpsilon = 7f;
 
     bool chill = false;
@@ -42,7 +47,7 @@ public class Patroler : MonoBehaviour
         animator = GetComponent<Animator>();
         prevX = transform.position.x;
         curX = transform.position.x;
-
+        attackCounter = 1;
         faceRight = true;
         isAttacking = false;
     }
@@ -152,21 +157,22 @@ public class Patroler : MonoBehaviour
     {
         canAttack = false;
         Speed = 0f;
+        animator.SetBool("IsAttacking", !canAttack);
         check();
-        //_player.animator.SetBool("IsAttacking", IsAttacking);
-
-        /* if (_player.attackCounter >= 2)
-         {
-             _player.attackCounter = 0;
-         }*/
 
         yield return new WaitForSeconds(attackingTime);
+
+        if (attackCounter >= 4)
+        {
+            attackCounter = 0;
+        }
+
         isAttacking = false;
         canAttack = true;
+        animator.SetBool("IsAttacking", !canAttack);
         Speed = 6f;
-        //_player.animator.SetBool("IsAttacking", IsAttacking);
-        //_player.attackCounter++;
-        //_player.animator.SetInteger("AttackCounter", _player.attackCounter);
+        attackCounter++;
+        animator.SetInteger("AttackCounter",attackCounter);
     }
 
     public void check()

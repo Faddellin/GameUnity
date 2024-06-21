@@ -232,7 +232,7 @@ namespace GameScene
             Gizmos.color = Color.red;
 
             // Создаем матрицу трансформации для поворота и перемещения бокса
-            Matrix4x4 rotationMatrix = Matrix4x4.TRS(wallCheckUp.position, Quaternion.Euler(0, 0, angle), Vector3.one);
+            Matrix4x4 rotationMatrix = Matrix4x4.TRS(GroundCheck.position, Quaternion.Euler(0, 0, angle), Vector3.one);
             Gizmos.matrix = rotationMatrix;
 
             // Рисуем проволочный куб (бокс)

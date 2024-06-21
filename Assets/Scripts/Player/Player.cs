@@ -10,11 +10,11 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 
 namespace GameScene
 {
-    public class Player : MonoBehaviour
+    public class Player : MonoBehaviour,IDamageable
     {
         [Header("Moving")]
-        public float speed = 1f;
-        public float jumpForce = 5f;
+        public float speed;
+        public float jumpForce;
         public bool IsFacingRight;
         public bool IsFalling;
         public bool IsMoving;
@@ -51,6 +51,7 @@ namespace GameScene
         [Header("Arms")]
         public Transform _playerArms;
         public Transform _attackArea;
+        private Transform _shurikenSpawnPoint;
 
         [Header("Dash")]
         public bool canDash;
@@ -79,6 +80,8 @@ namespace GameScene
 
             playeratak = gameObject.GetComponent<PlayerAttack>();
 
+            _shurikenSpawnPoint = transform.Find("WeaponAxis");
+
             IsFacingRight = true;
 
             IsFalling = false;
@@ -101,15 +104,15 @@ namespace GameScene
         private void FixedUpdate()
         {
             CheckingGround();
-            
+            CheckingWall();
         }
         void Update()
         {
+            WallJumpActivation();
             Strafe();
             Jump();
             testDamage();
-            WallJumpActivation();
-            CheckingWall();
+            GoDown();
 
             if (rb.velocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
             {
@@ -156,8 +159,11 @@ namespace GameScene
 
         public void Flip()
         {
+            
             wallCheckUp.transform.localPosition = new Vector3(-wallCheckUp.transform.localPosition.x, wallCheckUp.transform.localPosition.y, wallCheckUp.transform.localPosition.z);
             wallCheckDown.transform.localPosition = new Vector3(-wallCheckDown.transform.localPosition.x, wallCheckDown.transform.localPosition.y, wallCheckDown.transform.localPosition.z);
+
+            _shurikenSpawnPoint.transform.localPosition = new Vector3(-_shurikenSpawnPoint.transform.localPosition.x, _shurikenSpawnPoint.transform.localPosition.y, _shurikenSpawnPoint.transform.localPosition.z);
             _playerArms.transform.localPosition = new Vector3(-_playerArms.transform.localPosition.x, _playerArms.transform.localPosition.y, _playerArms.transform.localPosition.z);
             _attackArea.transform.localPosition = new Vector3(-_attackArea.transform.localPosition.x, _attackArea.transform.localPosition.y, _attackArea.transform.localPosition.z);
             IsFacingRight = !IsFacingRight;
@@ -194,7 +200,7 @@ namespace GameScene
         }
 
 
-        void CheckingGround()
+        public void CheckingGround()
         {
             onGround = Physics2D.OverlapBox(GroundCheck.position,size,angle,Ground);
             if (!onGround)
@@ -213,6 +219,7 @@ namespace GameScene
             }
             
         }
+
 
         void OnDrawGizmos()
         {
@@ -286,12 +293,23 @@ namespace GameScene
         {
             canDash = false;
             IsMoving = false;
+            animator.SetBool("IsDashing", true);
+
             float originalGravity = rb.gravityScale;
             rb.gravityScale = 0f;
+
+            Physics2D.IgnoreLayerCollision(7, 10, true);
+
             rb.velocity = new Vector2((Convert.ToInt32(IsFacingRight) * 2 - 1) * transform.localScale.x * dashPower, 0f);
+
             yield return new WaitForSeconds(dashingTime);
+
             rb.gravityScale = originalGravity;
             IsMoving = true;
+            animator.SetBool("IsDashing", false);
+
+            Physics2D.IgnoreLayerCollision(7, 10, false);
+
             yield return new WaitForSeconds(dashCooldown);
             canDash = true;
         }
@@ -319,14 +337,31 @@ namespace GameScene
         {
             canWallJump = false;
             IsMoving = false;
-            rb.AddForce(new Vector2(-(Convert.ToInt32(IsFacingRight) * 2 - 1)*jumpForce*0.9f, jumpForce - rb.velocity.y * rb.mass), ForceMode2D.Impulse);
+
+            rb.AddForce(new Vector2(-(Convert.ToInt32(IsFacingRight) * 2 - 1)*jumpForce*0.9f, jumpForce - rb.velocity.y * rb.mass),
+            ForceMode2D.Impulse);
+
             Flip();
             animator.SetBool("IsRight", IsFacingRight);
+
             yield return new WaitForSeconds(0.18f);
             IsMoving = true;
             yield return new WaitForSeconds(wallJumpCooldown-0.1f);
             canWallJump = true;
             extraJumps = 1;
+        }
+
+        public void GoDown()
+        {
+            if(Input.GetKeyDown(KeyCode.S))
+            {
+                Physics2D.IgnoreLayerCollision(10, 13, true);
+                Invoke("IgnoreLayerCollisionOff",0.5f);
+            }
+        }
+        private void IgnoreLayerCollisionOff()
+        {
+            Physics2D.IgnoreLayerCollision(10, 13, false);
         }
     }
 }

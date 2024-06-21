@@ -47,12 +47,13 @@ public class PlayerAttack : MonoBehaviour
         IsAttacking = true;
         _player.animator.SetBool("IsAttacking", IsAttacking);
 
-        if (_player.attackCounter >= 2)
+        yield return new WaitForSeconds(attackingTime);
+
+        if (_player.attackCounter >= 4)
         {
             _player.attackCounter = 0;
         }
 
-        yield return new WaitForSeconds(attackingTime);
         IsAttacking = false;
         canAttack = true;
         _player.animator.SetBool("IsAttacking", IsAttacking);

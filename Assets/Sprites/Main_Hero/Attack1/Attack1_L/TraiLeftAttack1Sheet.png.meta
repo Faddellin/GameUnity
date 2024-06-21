@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2f980934cef75dd4486c15d8038b4288
+guid: 854295e9d0dbb0542a10d0111b3b6d09
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,11 +93,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_0
+      name: TraiLeftAttack1Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3388f1bdd6853a24cb1744fc48e9b137
-      internalID: 2049779634
+      spriteID: dfe7ceb2dd5bff344852cde918021270
+      internalID: 906682609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_1
+      name: TraiLeftAttack1Sheet_1
       rect:
         serializedVersion: 2
         x: 224
@@ -132,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4af2ceffbb5013040ae2d34f543ae5bb
-      internalID: -533811230
+      spriteID: 4b5859ef9a0c09f49af1d453c992d635
+      internalID: 1318748316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_2
+      name: TraiLeftAttack1Sheet_2
       rect:
         serializedVersion: 2
         x: 448
@@ -153,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed4655df391d47d43b67e25ab1d118cf
-      internalID: 656667233
+      spriteID: 1dad4bcbbaec0e54a976aea47e697aee
+      internalID: 500513203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_3
+      name: TraiLeftAttack1Sheet_3
       rect:
         serializedVersion: 2
         x: 672
@@ -174,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 476db9eb49229c54784e16f66dd2c080
-      internalID: -466003811
+      spriteID: b896f0dcfeb68d440b9be6321484011e
+      internalID: 805982801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_4
+      name: TraiLeftAttack1Sheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -195,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df2420424b85e11418f4d33d78428fd0
-      internalID: 1853540079
+      spriteID: 6e887fac4765f2e48a8dce6bea5f84c5
+      internalID: 2050660828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_5
+      name: TraiLeftAttack1Sheet_5
       rect:
         serializedVersion: 2
         x: 224
@@ -216,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bff578be4468695478df5be7a3d9a3af
-      internalID: -1955633438
+      spriteID: 099e3f0e172986c449888045dfc5af99
+      internalID: 1857875736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_6
+      name: TraiLeftAttack1Sheet_6
       rect:
         serializedVersion: 2
         x: 448
@@ -237,29 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cf5d92894c661d479c7a16cd4077055
-      internalID: -1854803283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 200
-        width: 224
-        height: 156
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf862d4c96a8ed143ac70bd73a75a283
-      internalID: -16646407
+      spriteID: 70e7ef2b45ddb9a45bd9c2f3287d06f2
+      internalID: 2101437052
       vertices: []
       indices: 
       edges: []
@@ -275,14 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TrailLeftAttack2Sheet_0: 2049779634
-      TrailLeftAttack2Sheet_1: -533811230
-      TrailLeftAttack2Sheet_2: 656667233
-      TrailLeftAttack2Sheet_3: -466003811
-      TrailLeftAttack2Sheet_4: 1853540079
-      TrailLeftAttack2Sheet_5: -1955633438
-      TrailLeftAttack2Sheet_6: -1854803283
-      TrailLeftAttack2Sheet_7: -16646407
+      TraiLeftAttack1Sheet_0: 906682609
+      TraiLeftAttack1Sheet_1: 1318748316
+      TraiLeftAttack1Sheet_2: 500513203
+      TraiLeftAttack1Sheet_3: 805982801
+      TraiLeftAttack1Sheet_4: 2050660828
+      TraiLeftAttack1Sheet_5: 1857875736
+      TraiLeftAttack1Sheet_6: 2101437052
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

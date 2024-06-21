@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GameScene;
 
 public class Bullet : MonoBehaviour
 {
@@ -8,14 +9,10 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float normalBulletSpeed = 15f;
     [SerializeField] private float destroyTime = 3f;
     [SerializeField] private LayerMask desturctionLayer;
-
     private Rigidbody2D rb;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        SetStraightVelosity();
         DestroyBullet();
     }
 
@@ -23,6 +20,7 @@ public class Bullet : MonoBehaviour
     {
         if((desturctionLayer.value & (1 << collision.gameObject.layer)) > 0)
         {
+            Debug.Log("da");
             IDamageable IDamageable = collision.gameObject.GetComponent<IDamageable>();
             if (IDamageable != null)
             {
@@ -32,9 +30,16 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    private void SetStraightVelosity()
+    public void SetStraightVelosity(bool IsRight,Rigidbody2D rb)
     {
-        rb.velocity = transform.right * normalBulletSpeed;
+        if (IsRight)
+        {
+            rb.velocity = transform.right * normalBulletSpeed;
+        }
+        else
+        {
+            rb.velocity = -transform.right * normalBulletSpeed;
+        }
     }
 
     private void DestroyBullet()

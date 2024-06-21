@@ -37,6 +37,8 @@ public class PlayerAnimations : MonoBehaviour
     public Material second_Attack_right;
     public Material playerAttack_left;
     public Material second_Attack_left;
+    public Material forth_Attack_left;
+    public Material forth_Attack_right;
 
     private void Update()
     {
@@ -102,11 +104,14 @@ public class PlayerAnimations : MonoBehaviour
             switch (attackCounter)
             {
                 case 1:
-                    sr.sharedMaterial = playerAttack_right;
-                    break;
-                case 2:
                     sr.sharedMaterial = second_Attack_right;
                     attackCounter = 0;
+                    break;
+                case 3:
+                    sr.sharedMaterial = playerAttack_right;
+                    break;
+                case 4:
+                    sr.sharedMaterial = forth_Attack_right;
                     break;
             }
         }
@@ -115,11 +120,14 @@ public class PlayerAnimations : MonoBehaviour
             switch (attackCounter)
             {
                 case 1:
-                    sr.sharedMaterial = playerAttack_left;
-                    break;
-                case 2:
                     sr.sharedMaterial = second_Attack_left;
                     attackCounter = 0;
+                    break;
+                case 3:
+                    sr.sharedMaterial = playerAttack_left;
+                    break;
+                case 4:
+                    sr.sharedMaterial = forth_Attack_left;
                     break;
             }
         }
@@ -136,5 +144,9 @@ public class PlayerAnimations : MonoBehaviour
     public void startAttack1Right_Trail()
     {
         swordTrail.SetBool("Attack1Right_Trail", true);
+    }
+    public void startAttack1Left_Trail()
+    {
+        swordTrail.SetBool("Attack1Left_Trail", true);
     }
 }

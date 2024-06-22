@@ -204,7 +204,7 @@ namespace GameScene
         private IEnumerator JumpDelay()
         {
             jumpDelay = true;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.2f);
             jumpDelay = false;
         }
 

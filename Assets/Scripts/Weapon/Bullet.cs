@@ -20,7 +20,6 @@ public class Bullet : MonoBehaviour
     {
         if((desturctionLayer.value & (1 << collision.gameObject.layer)) > 0)
         {
-            Debug.Log("da");
             IDamageable IDamageable = collision.gameObject.GetComponent<IDamageable>();
             if (IDamageable != null)
             {

@@ -103,12 +103,12 @@ namespace GameScene
 
         private void FixedUpdate()
         {
-            CheckingGround();
             CheckingWall();
         }
         void Update()
         {
             WallJumpActivation();
+            CheckingGround();
             Strafe();
             Jump();
             testDamage();
@@ -174,14 +174,16 @@ namespace GameScene
 
         public void Jump()
         {
-            if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
+            if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 && !onGround)
             {
                 rb.AddForce(new Vector2(0, jumpForce - rb.velocity.y*rb.mass), ForceMode2D.Impulse);
+                animator.SetBool("Jump", true);
                 extraJumps--;
             }
             else if(Input.GetKeyDown(KeyCode.Space) && onGround)
             {
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+                animator.SetBool("Jump", true);
             }
         }
 
@@ -202,22 +204,18 @@ namespace GameScene
 
         public void CheckingGround()
         {
-            onGround = Physics2D.OverlapBox(GroundCheck.position,size,angle,Ground);
+            //onGround = Physics2D.OverlapBox(GroundCheck.position, size, angle, Ground);
+            //StartCoroutine(OnGroundDelay());
             if (!onGround)
             {
                 Falling();
-                animator.SetBool("Jump", !onGround);
-                
             }
-            else if(onGround)
+            else if (onGround)
             {
                 IsFalling = false;
                 extraJumps = 1;
                 animator.SetBool("IsFalling", IsFalling);
-                animator.SetBool("Jump", !onGround);
-                
             }
-            
         }
 
 

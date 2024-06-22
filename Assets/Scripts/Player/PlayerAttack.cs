@@ -41,6 +41,7 @@ public class PlayerAttack : MonoBehaviour
         {
            StartCoroutine(Attack());
         }
+
         if (Input.GetMouseButtonDown(0))
         {
             StartCoroutine(AttackDelay());

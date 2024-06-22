@@ -19,6 +19,7 @@ namespace GameScene
         public bool IsFalling;
         public bool IsMoving;
         public int extraJumps;
+        private bool jumpDelay;
         public float fallingGravityScale;
         public float commonGravityScale;
 
@@ -90,6 +91,8 @@ namespace GameScene
 
             canDash = true;
 
+            jumpDelay = false;
+
             animator = GetComponent<Animator>();
 
             rb = GetComponent<Rigidbody2D>();
@@ -113,19 +116,25 @@ namespace GameScene
             Jump();
             testDamage();
             GoDown();
+            ChangeCameraPos();
+           
+        }
+
+        public void ChangeCameraPos() {
 
             if (rb.velocity.y < _fallSpeedYDampingChangeThreshold && !CameraManager.instance.IsLerpingYDamping && !CameraManager.instance.LerpedFromPlayerFalling)
             {
                 CameraManager.instance.LerpYDamping(true);
             }
 
-            if(rb.velocity.y >= 0f && !CameraManager.instance.IsLerpingYDamping && CameraManager.instance.LerpedFromPlayerFalling)
+            if (rb.velocity.y >= 0f && !CameraManager.instance.IsLerpingYDamping && CameraManager.instance.LerpedFromPlayerFalling)
             {
                 CameraManager.instance.LerpedFromPlayerFalling = false;
 
                 CameraManager.instance.LerpYDamping(false);
             }
         }
+
 
         public void Strafe()
         {
@@ -174,17 +183,29 @@ namespace GameScene
 
         public void Jump()
         {
-            if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 && !onGround)
+            if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 && !onGround && !onWall)
             {
                 rb.AddForce(new Vector2(0, jumpForce - rb.velocity.y*rb.mass), ForceMode2D.Impulse);
                 animator.SetBool("Jump", true);
                 extraJumps--;
             }
-            else if(Input.GetKeyDown(KeyCode.Space) && onGround)
+            else if((Input.GetKeyDown(KeyCode.Space)||jumpDelay) && onGround)
             {
-                rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+                rb.AddForce(new Vector2(0, jumpForce - rb.velocity.y * rb.mass), ForceMode2D.Impulse);
                 animator.SetBool("Jump", true);
+                jumpDelay = false;
             }
+            else if(Input.GetKeyDown(KeyCode.Space) && !jumpDelay)
+            {
+                StartCoroutine(JumpDelay());
+            } 
+        }
+
+        private IEnumerator JumpDelay()
+        {
+            jumpDelay = true;
+            yield return new WaitForSeconds(0.5f);
+            jumpDelay = false;
         }
 
         public void Falling()
@@ -351,7 +372,7 @@ namespace GameScene
 
         public void GoDown()
         {
-            if(Input.GetKeyDown(KeyCode.S))
+            if(Input.GetKey(KeyCode.S))
             {
                 Physics2D.IgnoreLayerCollision(10, 13, true);
                 Invoke("IgnoreLayerCollisionOff",0.5f);

@@ -158,4 +158,20 @@ public class PlayerAnimations : MonoBehaviour
     {
         swordTrail.SetBool("Attack1Left_Trail", true);
     }
+    public void startAttack3Left_Trail()
+    {
+        swordTrail.SetBool("Attack3Left_Trail", true);
+    }
+    public void startAttack3Right_Trail()
+    {
+        swordTrail.SetBool("Attack3Right_Trail", true);
+    }
+    public void startAttack4Right_Trail()
+    {
+        swordTrail.SetBool("Attack4Right_Trail", true);
+    }
+    public void startAttack4Left_Trail()
+    {
+        swordTrail.SetBool("Attack4Left_Trail", true);
+    }
 }

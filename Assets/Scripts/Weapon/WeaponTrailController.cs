@@ -28,4 +28,21 @@ public class WeaponTrailController : MonoBehaviour
     {
         _animator.SetBool("Attack1Left_Trail", false);
     }
+
+    public void stopAttack3Left_Trail()
+    {
+        _animator.SetBool("Attack3Left_Trail", false);
+    }
+    public void stopAttack3Right_Trail()
+    {
+        _animator.SetBool("Attack3Right_Trail", false);
+    }
+    public void stopAttack4Right_Trail()
+    {
+        _animator.SetBool("Attack4Right_Trail", false);
+    }
+    public void stopAttack4Left_Trail()
+    {
+        _animator.SetBool("Attack4Left_Trail", false);
+    }
 }

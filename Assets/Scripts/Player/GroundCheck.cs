@@ -14,7 +14,10 @@ public class GroundCheck : MonoBehaviour
         if ((Ground.value & (1 << collision.gameObject.layer)) > 0)
         {
             player.onGround = true;
-            player.animator.SetBool("Jump", !player.onGround);
+            if (player.rb.velocity.y == 0)
+            {
+                player.animator.SetBool("Jump", !player.onGround);
+            }
         }
     }
 

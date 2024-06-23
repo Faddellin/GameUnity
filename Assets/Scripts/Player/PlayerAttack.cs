@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using GameScene;
+using System;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -16,7 +17,6 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] private Transform _playerTransform;
     private Player _player;
-    public bool IsFacingRight;
     public bool IsAttacking;
     private bool attackDelay;
 
@@ -32,7 +32,6 @@ public class PlayerAttack : MonoBehaviour
     private void Awake()
     {
         _player = _playerTransform.gameObject.GetComponent<Player>();
-        IsFacingRight = _player.IsFacingRight;
     }
 
     private void Update()
@@ -57,6 +56,8 @@ public class PlayerAttack : MonoBehaviour
 
     private IEnumerator Attack()
     {
+        
+        _player.rb.velocity = new Vector2((Convert.ToInt32(_player.IsFacingRight) * 2 - 1) * _player.speed*0.4f,_player.rb.velocity.y);
         canAttack = false;
         IsAttacking = true;
         _player.animator.SetBool("IsAttacking", IsAttacking);

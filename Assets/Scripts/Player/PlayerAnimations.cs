@@ -33,6 +33,7 @@ public class PlayerAnimations : MonoBehaviour
     public Material second_Attack_left;
     public Material forth_Attack_left;
     public Material third_Attack_left;
+    public Material slide_left;
 
     [Header("Materials Right")]
     public Material running_right;
@@ -43,6 +44,7 @@ public class PlayerAnimations : MonoBehaviour
     public Material second_Attack_right;
     public Material forth_Attack_right;
     public Material third_Attack_right;
+    public Material slide_right;
     private void Update()
     {
         IsFacingRight = player.IsFacingRight;
@@ -108,7 +110,6 @@ public class PlayerAnimations : MonoBehaviour
             {
                 case 1:
                     sr.sharedMaterial = second_Attack_right;
-                    attackCounter = 0;
                     break;
                 case 2:
                     sr.sharedMaterial = third_Attack_right;
@@ -127,7 +128,6 @@ public class PlayerAnimations : MonoBehaviour
             {
                 case 1:
                     sr.sharedMaterial = second_Attack_left;
-                    attackCounter = 0;
                     break;
                 case 2:
                     sr.sharedMaterial = third_Attack_left;
@@ -139,6 +139,18 @@ public class PlayerAnimations : MonoBehaviour
                     sr.sharedMaterial = forth_Attack_left;
                     break;
             }
+        }
+    }
+
+    public void SlidingAnimation()
+    {
+        if (!IsFacingRight)
+        {
+            sr.sharedMaterial = slide_right;
+        }
+        else
+        {
+            sr.sharedMaterial = slide_left;
         }
     }
 

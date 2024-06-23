@@ -9,12 +9,15 @@ public class Patroler : MonoBehaviour
     [Header("EnemyBehavior")]
     public float Speed;
     public int RadiusOfPatrol;
+    public float stoppingTime;
+    public bool wait;
 
     public Transform Point;
     private Animator animator;
 
-    bool MovingRight;
-    Transform Player;
+    private bool MovingRight;
+    public Transform Player;
+    private Rigidbody2D rb; 
 
     public float StoppingDistance;
 
@@ -25,7 +28,7 @@ public class Patroler : MonoBehaviour
     public bool isAttacking;
     public int attackCounter;
 
-    public float AttackEpsilon = 7f;
+    public float AttackEpsilon;
 
     bool chill = false;
     bool angry = false;
@@ -43,20 +46,24 @@ public class Patroler : MonoBehaviour
 
     void Start()
     {
+        Physics2D.IgnoreLayerCollision(7, 10, true);
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
         prevX = transform.position.x;
         curX = transform.position.x;
         attackCounter = 1;
         faceRight = true;
         isAttacking = false;
+        wait = false;
+        MovingRight = true;
     }
 
     void Update()
     {
+        prevX = curX;
         curX = transform.position.x;
         Reflect();
-        prevX = curX;
         if (Vector2.Distance(transform.position, Point.position) < RadiusOfPatrol && !angry)
         {
             chill = true;
@@ -84,11 +91,6 @@ public class Patroler : MonoBehaviour
             isAttacking = false;
         }
 
-        if (isAttacking && canAttack)
-        {
-           StartCoroutine(Attack());
-        }
-
         if (chill)
         {
             Chill();
@@ -101,78 +103,103 @@ public class Patroler : MonoBehaviour
         {
             GoBack();
         }
-        if (isAttacking)
-        {
-            //animator.SetBool("isAttacking", isAttacking);
-        }
-        else
-        {
-            //animator.SetBool("isChasing", angry);
-        }
     }
 
-    void Chill()
+    public void Chill()
     {
-        Speed = 0f;
         if (transform.position.x > Point.position.x + RadiusOfPatrol)
         {
-            MovingRight = false;
+            if (MovingRight)
+            {
+                StartCoroutine(Wait());
+                MovingRight = false;
+            }
+
         }
         else if (transform.position.x < Point.position.x - RadiusOfPatrol)
         {
-            MovingRight = true;
+            if (!MovingRight)
+            {
+                StartCoroutine(Wait());
+                MovingRight = true;
+            }
         }
 
-        if (MovingRight)
+        if (MovingRight && !wait)
         {
-            transform.position = new Vector2(transform.position.x + Speed * Time.deltaTime, transform.position.y);
+           rb.velocity = new Vector2(Speed, rb.velocity.y);
         }
-        else
+        else if (!MovingRight && !wait)
         {
-            transform.position = new Vector2(transform.position.x - Speed * Time.deltaTime, transform.position.y);
+           rb.velocity = new Vector2(- Speed, rb.velocity.y);
         }
     }
 
-    void Angry()
+    private IEnumerator Wait()
     {
-        Speed = 0f;
-        transform.position = Vector2.MoveTowards(transform.position, Player.position, Speed * Time.deltaTime);
+        wait = true;
+        rb.velocity = new Vector2(0,rb.velocity.y);
+        yield return new WaitForSeconds(stoppingTime);
+        wait= false;
+    }
+
+    public void Angry()
+    {
+        if (isAttacking && canAttack)
+        {
+            StartCoroutine(Attack());
+        }
+        else if (Player.position.x > transform.position.x && canAttack)
+        {
+            rb.velocity = new Vector2 (Speed, rb.velocity.y);
+        }
+        else if(Player.position.x < transform.position.x && canAttack)
+        {
+            rb.velocity = new Vector2 (-Speed, rb.velocity.y);
+        }
     }
 
     void GoBack()
     {
-        transform.position = Vector2.MoveTowards(transform.position, Point.position, Speed * Time.deltaTime);
+        if (Point.position.x > transform.position.x && canAttack)
+        {
+            rb.velocity = new Vector2(Speed, rb.velocity.y);
+        }
+        else if (Point.position.x < transform.position.x && canAttack)
+        {
+            rb.velocity = new Vector2(-Speed, rb.velocity.y);
+        }
     }
 
     void Reflect()
     {
-        if ((curX - prevX < 0 && !faceRight) || (curX - prevX > 0 && faceRight))
+        if ((curX - prevX < 0 && faceRight) || (curX - prevX > 0 && !faceRight))
         {
             faceRight = !faceRight;
             animator.SetBool("IsRight", faceRight);
+
+            attackTransform.transform.localPosition = new Vector3(-attackTransform.transform.localPosition.x,
+                attackTransform.transform.localPosition.y,attackTransform.transform.localPosition.z);
         }
     }
 
     private IEnumerator Attack()
     {
         canAttack = false;
-        Speed = 0f;
+        rb.velocity = new Vector2 (0, rb.velocity.y);
         animator.SetBool("IsAttacking", !canAttack);
-        check();
 
         yield return new WaitForSeconds(attackingTime);
 
         if (attackCounter >= 4)
         {
             attackCounter = 0;
+            
         }
-
-        isAttacking = false;
         canAttack = true;
         animator.SetBool("IsAttacking", !canAttack);
-        Speed = 6f;
         attackCounter++;
-        animator.SetInteger("AttackCounter",attackCounter);
+        animator.SetInteger("attackCount",attackCounter);
     }
 
     public void check()

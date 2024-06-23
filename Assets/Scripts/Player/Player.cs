@@ -63,11 +63,11 @@ namespace GameScene
         [Header("WallJump")]
         public bool onWall;
         public Transform wallCheckUp;
-        public Transform wallCheckDown;
         public Vector2 boxSize;
 
         [Header("OnGround/Wall")]
         public bool onGround;
+        public float slideSpeed;
         public Transform GroundCheck;
         public Vector2 size = new Vector2(2.0f, 1.0f);
         public float angle = 0.0f;
@@ -102,6 +102,8 @@ namespace GameScene
             followingCamera = cameraFollowGo.GetComponent<FollowingCameraObject>();
 
             _fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThreshold;
+
+            Physics2D.IgnoreLayerCollision(7, 10, true);
         }
 
         private void FixedUpdate()
@@ -117,7 +119,9 @@ namespace GameScene
             testDamage();
             GoDown();
             ChangeCameraPos();
-           
+            WallSlide();
+
+
         }
 
         public void ChangeCameraPos() {
@@ -170,7 +174,6 @@ namespace GameScene
         {
             
             wallCheckUp.transform.localPosition = new Vector3(-wallCheckUp.transform.localPosition.x, wallCheckUp.transform.localPosition.y, wallCheckUp.transform.localPosition.z);
-            wallCheckDown.transform.localPosition = new Vector3(-wallCheckDown.transform.localPosition.x, wallCheckDown.transform.localPosition.y, wallCheckDown.transform.localPosition.z);
 
             _shurikenSpawnPoint.transform.localPosition = new Vector3(-_shurikenSpawnPoint.transform.localPosition.x, _shurikenSpawnPoint.transform.localPosition.y, _shurikenSpawnPoint.transform.localPosition.z);
             _playerArms.transform.localPosition = new Vector3(-_playerArms.transform.localPosition.x, _playerArms.transform.localPosition.y, _playerArms.transform.localPosition.z);
@@ -335,7 +338,7 @@ namespace GameScene
 
         public void CheckingWall()
         {
-            onWall = (Physics2D.OverlapBox(wallCheckUp.position, boxSize, angle, Wall) && Physics2D.OverlapBox(wallCheckDown.position, boxSize, angle, Wall));
+            onWall = (Physics2D.OverlapBox(wallCheckUp.position, boxSize, angle, Wall));
             animator.SetBool("OnWall", onWall);
            
         }
@@ -356,6 +359,7 @@ namespace GameScene
         {
             canWallJump = false;
             IsMoving = false;
+            onWall = false;
 
             rb.AddForce(new Vector2(-(Convert.ToInt32(IsFacingRight) * 2 - 1)*jumpForce*0.9f, jumpForce - rb.velocity.y * rb.mass),
             ForceMode2D.Impulse);
@@ -368,6 +372,19 @@ namespace GameScene
             yield return new WaitForSeconds(wallJumpCooldown-0.1f);
             canWallJump = true;
             extraJumps = 1;
+        }
+
+        public void WallSlide()
+        {
+            if(onWall && !onGround)
+            {
+                rb.gravityScale = 0;
+                rb.velocity = new Vector2(rb.velocity.x,-slideSpeed);
+            }
+            else
+            {
+                rb.gravityScale = commonGravityScale;
+            }
         }
 
         public void GoDown()

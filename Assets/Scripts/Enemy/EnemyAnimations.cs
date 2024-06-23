@@ -7,7 +7,7 @@ public class EnemyAnimations : MonoBehaviour
 {
     public Transform enemyTransform;
     private Patroler enemy;
-    private Animator swordTrail;
+    public Animator swordTrail;
 
     private bool IsFacingRight;
     private bool IsFalling;
@@ -29,6 +29,7 @@ public class EnemyAnimations : MonoBehaviour
     public Material playerAttack_right;
     public Material second_Attack_right;
     public Material forth_Attack_right;
+    public Material third_Attack_right;
 
     [Header("Material Left")]
     public Material running_left;
@@ -38,12 +39,12 @@ public class EnemyAnimations : MonoBehaviour
     public Material playerAttack_left;
     public Material second_Attack_left;
     public Material forth_Attack_left;
+    public Material third_Attack_left;
 
     private void Update()
     {
         IsFacingRight = enemy.faceRight;
         attackCounter = enemy.attackCounter;
-        //swordTrail = enemy.swordTrail;
     }
     public void EnemyIdleAnim()
     {
@@ -103,7 +104,9 @@ public class EnemyAnimations : MonoBehaviour
             {
                 case 1:
                     sr.sharedMaterial = second_Attack_right;
-                    attackCounter = 0;
+                    break;
+                case 2:
+                    sr.sharedMaterial = third_Attack_right;
                     break;
                 case 3:
                     sr.sharedMaterial = playerAttack_right;
@@ -119,7 +122,9 @@ public class EnemyAnimations : MonoBehaviour
             {
                 case 1:
                     sr.sharedMaterial = second_Attack_left;
-                    attackCounter = 0;
+                    break;
+                case 2:
+                    sr.sharedMaterial = third_Attack_left;
                     break;
                 case 3:
                     sr.sharedMaterial = playerAttack_left;
@@ -129,5 +134,37 @@ public class EnemyAnimations : MonoBehaviour
                     break;
             }
         }
+    }
+    public void startAttack2Right_Trail()
+    {
+        swordTrail.SetBool("Attack2Right_Trail", true);
+    }
+    public void startAttack2Left_Trail()
+    {
+        swordTrail.SetBool("Attack2Left_Trail", true);
+    }
+    public void startAttack1Right_Trail()
+    {
+        swordTrail.SetBool("Attack1Right_Trail", true);
+    }
+    public void startAttack1Left_Trail()
+    {
+        swordTrail.SetBool("Attack1Left_Trail", true);
+    }
+    public void startAttack3Left_Trail()
+    {
+        swordTrail.SetBool("Attack3Left_Trail", true);
+    }
+    public void startAttack3Right_Trail()
+    {
+        swordTrail.SetBool("Attack3Right_Trail", true);
+    }
+    public void startAttack4Right_Trail()
+    {
+        swordTrail.SetBool("Attack4Right_Trail", true);
+    }
+    public void startAttack4Left_Trail()
+    {
+        swordTrail.SetBool("Attack4Left_Trail", true);
     }
 }

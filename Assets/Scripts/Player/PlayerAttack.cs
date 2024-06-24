@@ -57,7 +57,7 @@ public class PlayerAttack : MonoBehaviour
     private IEnumerator Attack()
     {
         
-        _player.rb.velocity = new Vector2((Convert.ToInt32(_player.IsFacingRight) * 2 - 1) * _player.speed*0.4f,_player.rb.velocity.y);
+        _player.rb.velocity = new Vector2((Convert.ToInt32(_player.IsFacingRight) * 2 - 1) * _player.speed,_player.rb.velocity.y);
         canAttack = false;
         IsAttacking = true;
         _player.animator.SetBool("IsAttacking", IsAttacking);

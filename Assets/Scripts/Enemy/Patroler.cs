@@ -128,10 +128,12 @@ public class Patroler : MonoBehaviour
         if (MovingRight && !wait)
         {
            rb.velocity = new Vector2(Speed, rb.velocity.y);
+            animator.SetFloat("Speed", Speed);
         }
         else if (!MovingRight && !wait)
         {
            rb.velocity = new Vector2(- Speed, rb.velocity.y);
+            animator.SetFloat("Speed", Speed);
         }
     }
 
@@ -139,6 +141,7 @@ public class Patroler : MonoBehaviour
     {
         wait = true;
         rb.velocity = new Vector2(0,rb.velocity.y);
+        animator.SetFloat("Speed", 0);
         yield return new WaitForSeconds(stoppingTime);
         wait= false;
     }
@@ -152,10 +155,12 @@ public class Patroler : MonoBehaviour
         else if (Player.position.x > transform.position.x && canAttack)
         {
             rb.velocity = new Vector2 (Speed, rb.velocity.y);
+            animator.SetFloat("Speed", Speed);
         }
         else if(Player.position.x < transform.position.x && canAttack)
         {
             rb.velocity = new Vector2 (-Speed, rb.velocity.y);
+            animator.SetFloat("Speed", Speed);
         }
     }
 
@@ -164,10 +169,12 @@ public class Patroler : MonoBehaviour
         if (Point.position.x > transform.position.x && canAttack)
         {
             rb.velocity = new Vector2(Speed, rb.velocity.y);
+            animator.SetFloat("Speed", Speed);
         }
         else if (Point.position.x < transform.position.x && canAttack)
         {
             rb.velocity = new Vector2(-Speed, rb.velocity.y);
+            animator.SetFloat("Speed", Speed);
         }
     }
 
@@ -187,6 +194,7 @@ public class Patroler : MonoBehaviour
     {
         canAttack = false;
         rb.velocity = new Vector2 (0, rb.velocity.y);
+        animator.SetFloat("Speed", 0);
         animator.SetBool("IsAttacking", !canAttack);
 
         yield return new WaitForSeconds(attackingTime);

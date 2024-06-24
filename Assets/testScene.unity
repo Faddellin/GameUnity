@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerTransform: {fileID: 1507954631}
   _player: {fileID: 384543455}
-  _flipRotationTime: 0.2
+  _flipRotationTime: 0.5
 --- !u!1 &384543449
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,6 +378,7 @@ MonoBehaviour:
   IsFacingRight: 0
   IsFalling: 0
   IsMoving: 0
+  isJumping: 0
   extraJumps: 1
   fallingGravityScale: 6
   commonGravityScale: 5
@@ -406,6 +407,7 @@ MonoBehaviour:
   dashCooldown: 0.3
   onWall: 0
   wallCheckUp: {fileID: 523213353}
+  wallCheckDown: {fileID: 1393523610}
   boxSize: {x: 0, y: 0}
   onGround: 0
   slideSpeed: 3
@@ -2137,7 +2139,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1 &1448271327
 GameObject:
@@ -3292,9 +3294,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _allVirtualCameras:
   - {fileID: 2140818966}
-  _fallPanAmount: 1.58
-  _fallYPanTime: 143.92
-  _fallSpeedYDampingChangeThreshold: 0
+  _fallPanAmount: 0.25
+  _fallYPanTime: 0.35
+  _fallSpeedYDampingChangeThreshold: -15
 --- !u!1 &2101061201
 GameObject:
   m_ObjectHideFlags: 0

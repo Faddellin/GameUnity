@@ -63,6 +63,7 @@ namespace GameScene
         [Header("WallJump")]
         public bool onWall;
         public Transform wallCheckUp;
+        public Transform wallCheckDown;
         public Vector2 boxSize;
 
         [Header("OnGround/Wall")]
@@ -118,7 +119,6 @@ namespace GameScene
             CheckingGround();
             Strafe();
             Jump();
-            testDamage();
             GoDown();
             ChangeCameraPos();
             WallSlide();
@@ -177,10 +177,12 @@ namespace GameScene
         {
             
             wallCheckUp.transform.localPosition = new Vector3(-wallCheckUp.transform.localPosition.x, wallCheckUp.transform.localPosition.y, wallCheckUp.transform.localPosition.z);
+            wallCheckDown.transform.localPosition = new Vector3(-wallCheckDown.transform.localPosition.x, wallCheckDown.transform.localPosition.y, wallCheckDown.transform.localPosition.z);
 
             _shurikenSpawnPoint.transform.localPosition = new Vector3(-_shurikenSpawnPoint.transform.localPosition.x, _shurikenSpawnPoint.transform.localPosition.y, _shurikenSpawnPoint.transform.localPosition.z);
             _playerArms.transform.localPosition = new Vector3(-_playerArms.transform.localPosition.x, _playerArms.transform.localPosition.y, _playerArms.transform.localPosition.z);
             _attackArea.transform.localPosition = new Vector3(-_attackArea.transform.localPosition.x, _attackArea.transform.localPosition.y, _attackArea.transform.localPosition.z);
+
             IsFacingRight = !IsFacingRight;
             animator.SetBool("IsRight", IsFacingRight);
             followingCamera.CallTurn();
@@ -233,8 +235,6 @@ namespace GameScene
 
         public void CheckingGround()
         {
-            //onGround = Physics2D.OverlapBox(GroundCheck.position, size, angle, Ground);
-            //StartCoroutine(OnGroundDelay());
             if (!onGround)
             {
                 Falling();
@@ -267,12 +267,6 @@ namespace GameScene
 
             // —брасываем матрицу трансформации Gizmos
             Gizmos.matrix = Matrix4x4.identity;
-        }
-        void testDamage()
-        {
-            if(Input.GetKeyDown(KeyCode.F)) {
-                Damage(1f);
-            }
         }
         public void Damage(float damage)
         {
@@ -344,7 +338,7 @@ namespace GameScene
 
         public void CheckingWall()
         {
-            onWall = (Physics2D.OverlapBox(wallCheckUp.position, boxSize, angle, Wall));
+            onWall = (Physics2D.OverlapBox(wallCheckUp.position, boxSize, angle, Wall) && Physics2D.OverlapBox(wallCheckDown.position, boxSize, angle, Wall));
             animator.SetBool("OnWall", onWall);
            
         }

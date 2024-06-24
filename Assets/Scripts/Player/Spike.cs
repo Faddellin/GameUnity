@@ -5,7 +5,7 @@ using GameScene;
 
 public class Spike : MonoBehaviour
 {
-    private float CoolDown = 0f;
+    private float CoolDown = 2f;
     public Player Player;
     private bool CanDamage;
 

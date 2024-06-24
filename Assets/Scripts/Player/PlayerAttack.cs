@@ -19,7 +19,6 @@ public class PlayerAttack : MonoBehaviour
     private Player _player;
     private Animator playerAnimator;
     public bool isNextAttack;
-    private bool attackDelay;
 
     public float attackingTime;
     public bool canAttack;
@@ -28,7 +27,6 @@ public class PlayerAttack : MonoBehaviour
     {
         isNextAttack = false;
         canAttack = true;
-        attackDelay = false;
     }
     private void Awake()
     {

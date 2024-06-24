@@ -30,8 +30,8 @@ public class PlayerAttack : MonoBehaviour
     }
     private void Awake()
     {
-        playerAnimator = gameObject.GetComponent<Animator>();
-        _player = _playerTransform.gameObject.GetComponent<Player>();
+         playerAnimator = gameObject.GetComponent<Animator>();
+        _player = _playerTransform.gameObject.GetComponent<Player>();   
     }
 
     private void Update()

@@ -5,18 +5,17 @@ using GameScene;
 
 public class Spike : MonoBehaviour
 {
-    private float CoolDown = 0f;
+    private float CoolDown = 2f;
     public Player Player;
-    private bool CanDamage;
+    public bool CanDamage;
 
     void Start()
     {
         CanDamage = true;
     }
-
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && CanDamage)
+        if (collision.gameObject.tag == "Player" && CanDamage)
         {
             StartCoroutine(Wait());
         }

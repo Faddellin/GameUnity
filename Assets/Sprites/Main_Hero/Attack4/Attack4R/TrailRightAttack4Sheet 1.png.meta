@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2f980934cef75dd4486c15d8038b4288
+guid: 94d30d7362fa15f4099bf8185ee27f44
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,169 +97,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_0
+      name: TrailRightAttack4Sheet 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 356
         width: 224
         height: 156
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3388f1bdd6853a24cb1744fc48e9b137
-      internalID: 2049779634
+      spriteID: 8a59b4aa2ca6c13478912334775bfbde
+      internalID: -1930362250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_1
+      name: TrailRightAttack4Sheet 1_1
       rect:
         serializedVersion: 2
         x: 224
         y: 356
         width: 224
         height: 156
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4af2ceffbb5013040ae2d34f543ae5bb
-      internalID: -533811230
+      spriteID: d3331ca2607c6f04e987d0e2003361b6
+      internalID: 1996103465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_2
+      name: TrailRightAttack4Sheet 1_2
       rect:
         serializedVersion: 2
         x: 448
         y: 356
         width: 224
         height: 156
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed4655df391d47d43b67e25ab1d118cf
-      internalID: 656667233
+      spriteID: 900663688c262e04ab25a8d4c1742f7c
+      internalID: 1070910043
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_3
+      name: TrailRightAttack4Sheet 1_3
       rect:
         serializedVersion: 2
         x: 672
         y: 356
         width: 224
         height: 156
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 476db9eb49229c54784e16f66dd2c080
-      internalID: -466003811
+      spriteID: d19cf6422ff932e4daef449f1f01a482
+      internalID: -77897525
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_4
+      name: TrailRightAttack4Sheet 1_4
       rect:
         serializedVersion: 2
         x: 0
         y: 200
         width: 224
         height: 156
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df2420424b85e11418f4d33d78428fd0
-      internalID: 1853540079
+      spriteID: b8e57a7708009014a9c40b5da28ffb3e
+      internalID: 96371887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_5
+      name: TrailRightAttack4Sheet 1_5
       rect:
         serializedVersion: 2
         x: 224
         y: 200
         width: 224
         height: 156
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bff578be4468695478df5be7a3d9a3af
-      internalID: -1955633438
+      spriteID: 049cfaa47567f084e93215613853ac42
+      internalID: -1087893070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_6
+      name: TrailRightAttack4Sheet 1_6
       rect:
         serializedVersion: 2
         x: 448
         y: 200
         width: 224
         height: 156
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cf5d92894c661d479c7a16cd4077055
-      internalID: -1854803283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TrailLeftAttack2Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 672
-        y: 200
-        width: 224
-        height: 156
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf862d4c96a8ed143ac70bd73a75a283
-      internalID: -16646407
+      spriteID: 70c2bbb1a049b3e418b6edc6429b881a
+      internalID: 1355254728
       vertices: []
       indices: 
       edges: []
@@ -275,14 +254,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TrailLeftAttack2Sheet_0: 2049779634
-      TrailLeftAttack2Sheet_1: -533811230
-      TrailLeftAttack2Sheet_2: 656667233
-      TrailLeftAttack2Sheet_3: -466003811
-      TrailLeftAttack2Sheet_4: 1853540079
-      TrailLeftAttack2Sheet_5: -1955633438
-      TrailLeftAttack2Sheet_6: -1854803283
-      TrailLeftAttack2Sheet_7: -16646407
+      TrailRightAttack4Sheet 1_0: -1930362250
+      TrailRightAttack4Sheet 1_1: 1996103465
+      TrailRightAttack4Sheet 1_2: 1070910043
+      TrailRightAttack4Sheet 1_3: -77897525
+      TrailRightAttack4Sheet 1_4: 96371887
+      TrailRightAttack4Sheet 1_5: -1087893070
+      TrailRightAttack4Sheet 1_6: 1355254728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

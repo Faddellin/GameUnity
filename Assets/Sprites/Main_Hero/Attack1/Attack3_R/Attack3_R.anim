@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack1_R
+  m_Name: Attack3_R
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -135,7 +135,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.21666667
-    functionName: startAttack1Right_Trail
+    functionName: startAttack3Right_Trail
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -143,6 +143,13 @@ AnimationClip:
     messageOptions: 0
   - time: 0.3
     functionName: check
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.31666666
+    functionName: stopAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

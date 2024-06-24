@@ -8,9 +8,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 4
+  - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.1
+    m_EventTreshold: -99
   - m_ConditionMode: 2
     m_ConditionEvent: Jump
     m_EventTreshold: 0
@@ -20,17 +20,17 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: IsFalling
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsAttacking
+    m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: OnWall
     m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCounter
-    m_EventTreshold: 2
+    m_EventTreshold: 3
   - m_ConditionMode: 2
     m_ConditionEvent: IsDashing
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsAttacking
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5887177338109009441}
@@ -127,16 +127,16 @@ AnimatorStateMachine:
     m_Position: {x: 180, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7823990343951815281}
-    m_Position: {x: 180, y: -10, z: 0}
+    m_Position: {x: 180, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3669186926607391232}
-    m_Position: {x: 750, y: -20, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -5919358693926368867}
     m_Position: {x: 750, y: 30, z: 0}
   - serializedVersion: 1
+    m_State: {fileID: -5919358693926368867}
+    m_Position: {x: 750, y: -20, z: 0}
+  - serializedVersion: 1
     m_State: {fileID: 5887177338109009441}
-    m_Position: {x: 180, y: 40, z: 0}
+    m_Position: {x: 180, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3005363771743568929}
     m_Position: {x: 750, y: 80, z: 0}
@@ -178,7 +178,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_idle_right
+  m_Name: IdleR
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -236,7 +236,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Attack3R
-  m_Speed: 1.5
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -248,7 +248,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e37ddbf2f92e58143bad12f2f8628155, type: 2}
+  m_Motion: {fileID: 7400000, guid: 69988eee553b519479c6f20902e60060, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -262,23 +262,29 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 4
+  - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.1
+    m_EventTreshold: -99
   - m_ConditionMode: 2
     m_ConditionEvent: Jump
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IsRight
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsFalling
+    m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: IsAttacking
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: OnWall
+    m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCounter
-    m_EventTreshold: 1
+    m_EventTreshold: 2
   - m_ConditionMode: 2
-    m_ConditionEvent: IsFalling
+    m_ConditionEvent: IsDashing
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 682146109944552997}
@@ -288,9 +294,9 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 0.018167928
   m_HasExitTime: 0
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 0
@@ -301,7 +307,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_run_right
+  m_Name: RunR
   m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions: []
@@ -327,7 +333,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_falling_right
+  m_Name: FallR
   m_Speed: 1.3
   m_CycleOffset: 0
   m_Transitions: []
@@ -353,8 +359,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_attacking_left
-  m_Speed: 1.5
+  m_Name: Attack1L
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -366,7 +372,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7c2b8d2ef62f6614ca4363a56e00d377, type: 2}
+  m_Motion: {fileID: 7400000, guid: e5b7e39d263667e49bad55b7d94f71e1, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -388,6 +394,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IsFalling
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: OnWall
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1036926500152915593}
@@ -411,11 +420,14 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 4
+  - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.1
+    m_EventTreshold: -99
   - m_ConditionMode: 2
     m_ConditionEvent: Jump
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsRight
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IsFalling
@@ -429,9 +441,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCounter
     m_EventTreshold: 4
-  - m_ConditionMode: 2
-    m_ConditionEvent: IsRight
-    m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IsDashing
     m_EventTreshold: 0
@@ -456,7 +465,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_jump_left
+  m_Name: JumpL
   m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions: []
@@ -482,8 +491,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_attacking_right
-  m_Speed: 1.5
+  m_Name: Attack1R
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -495,7 +504,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 69988eee553b519479c6f20902e60060, type: 2}
+  m_Motion: {fileID: 7400000, guid: 45e6b84e4eaa77743aef72be0a8a63fd, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -517,6 +526,9 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: Jump
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsAttacking
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IsFalling
@@ -672,6 +684,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: IsMoving
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -693,9 +711,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 4
+  - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.1
+    m_EventTreshold: -99
   - m_ConditionMode: 2
     m_ConditionEvent: Jump
     m_EventTreshold: 0
@@ -705,17 +723,17 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: IsFalling
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsAttacking
+    m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: OnWall
     m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCounter
-    m_EventTreshold: 2
+    m_EventTreshold: 3
   - m_ConditionMode: 2
     m_ConditionEvent: IsDashing
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsAttacking
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5919358693926368867}
@@ -754,9 +772,15 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: IsAttacking
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: OnWall
+    m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCounter
-    m_EventTreshold: 1
+    m_EventTreshold: 2
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsDashing
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1198284851201339443}
   m_Solo: 0
@@ -767,7 +791,7 @@ AnimatorStateTransition:
   m_TransitionOffset: 0
   m_ExitTime: 7.4505807e-10
   m_HasExitTime: 0
-  m_HasFixedDuration: 1
+  m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 0
@@ -778,8 +802,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Second_left_attack
-  m_Speed: 1.5
+  m_Name: Attack2L
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -791,7 +815,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e5b7e39d263667e49bad55b7d94f71e1, type: 2}
+  m_Motion: {fileID: 7400000, guid: 9221268847849c34a89e83c9385a7186, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -804,7 +828,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_falling_left
+  m_Name: FallL
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -830,7 +854,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_jump_right
+  m_Name: JumpR
   m_Speed: 1.5
   m_CycleOffset: 1
   m_Transitions: []
@@ -856,8 +880,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Second_right_attack
-  m_Speed: 1.5
+  m_Name: Attack2R
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -869,7 +893,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 45e6b84e4eaa77743aef72be0a8a63fd, type: 2}
+  m_Motion: {fileID: 7400000, guid: e37ddbf2f92e58143bad12f2f8628155, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -883,9 +907,9 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 4
+  - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.1
+    m_EventTreshold: -99
   - m_ConditionMode: 2
     m_ConditionEvent: Jump
     m_EventTreshold: 0
@@ -898,12 +922,12 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: IsAttacking
     m_EventTreshold: 0
-  - m_ConditionMode: 6
-    m_ConditionEvent: AttackCounter
-    m_EventTreshold: 4
   - m_ConditionMode: 2
     m_ConditionEvent: OnWall
     m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: AttackCounter
+    m_EventTreshold: 4
   - m_ConditionMode: 2
     m_ConditionEvent: IsDashing
     m_EventTreshold: 0
@@ -986,24 +1010,30 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsRight
-    m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsAttacking
-    m_EventTreshold: 0
   - m_ConditionMode: 3
     m_ConditionEvent: Speed
     m_EventTreshold: -99
   - m_ConditionMode: 2
     m_ConditionEvent: Jump
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsRight
+    m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IsFalling
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: IsAttacking
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: OnWall
+    m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCounter
-    m_EventTreshold: 3
+    m_EventTreshold: 1
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsDashing
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1247147230404690773}
   m_Solo: 0
@@ -1026,7 +1056,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Attack4R
-  m_Speed: 1.5
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -1082,7 +1112,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_idle_left
+  m_Name: IdleL
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -1146,7 +1176,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Attack3L
-  m_Speed: 1.5
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -1158,7 +1188,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9221268847849c34a89e83c9385a7186, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7c2b8d2ef62f6614ca4363a56e00d377, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1198,11 +1228,14 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 4
+  - m_ConditionMode: 3
     m_ConditionEvent: Speed
-    m_EventTreshold: 0.1
+    m_EventTreshold: -99
   - m_ConditionMode: 2
     m_ConditionEvent: Jump
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsRight
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: IsFalling
@@ -1211,11 +1244,14 @@ AnimatorStateTransition:
     m_ConditionEvent: IsAttacking
     m_EventTreshold: 0
   - m_ConditionMode: 2
-    m_ConditionEvent: IsRight
+    m_ConditionEvent: OnWall
     m_EventTreshold: 0
   - m_ConditionMode: 6
     m_ConditionEvent: AttackCounter
-    m_EventTreshold: 3
+    m_EventTreshold: 1
+  - m_ConditionMode: 2
+    m_ConditionEvent: IsDashing
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3820676899462535317}
   m_Solo: 0
@@ -1238,7 +1274,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Attack4L
-  m_Speed: 1.5
+  m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -1294,7 +1330,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Player_run_left
+  m_Name: RunL
   m_Speed: 1.5
   m_CycleOffset: 0
   m_Transitions: []

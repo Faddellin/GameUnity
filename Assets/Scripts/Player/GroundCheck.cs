@@ -16,7 +16,8 @@ public class GroundCheck : MonoBehaviour
             player.onGround = true;
             if (player.rb.velocity.y == 0)
             {
-                player.animator.SetBool("Jump", !player.onGround);
+                player.isJumping = false;
+                player.animator.SetBool("Jump", false);
             }
         }
     }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c3186a307aeb6854fad5109f4094d5a8
+guid: 854295e9d0dbb0542a10d0111b3b6d09
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TrailRightAttack4Sheet_0
+      name: TraiLeftAttack1Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02c8ac46e2b6ef74a85a3144b42466d3
-      internalID: -631896889
+      spriteID: 55771e281018bf84cab3c4d08a1c078d
+      internalID: -271301980
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailRightAttack4Sheet_1
+      name: TraiLeftAttack1Sheet_1
       rect:
         serializedVersion: 2
         x: 224
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e413909f5a22b2945a189d188efb814f
-      internalID: -1027456510
+      spriteID: 074c278082dd890488c0acaa4c5739ff
+      internalID: 84655284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailRightAttack4Sheet_2
+      name: TraiLeftAttack1Sheet_2
       rect:
         serializedVersion: 2
         x: 448
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8888119105236748b21b46f37f1a21f
-      internalID: 821038083
+      spriteID: c08685d056542924faa4b495c6976b16
+      internalID: -10497938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailRightAttack4Sheet_3
+      name: TraiLeftAttack1Sheet_3
       rect:
         serializedVersion: 2
         x: 672
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: febf15407b4124542bbd1e56f641dc72
-      internalID: -1380078255
+      spriteID: 2eb83fe54eb24934d90322268a624467
+      internalID: 1432953335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailRightAttack4Sheet_4
+      name: TraiLeftAttack1Sheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3712322ed491e74f9ecb98efd9ef263
-      internalID: 262039320
+      spriteID: a3607e2e40eddb04a92525056f6b6f22
+      internalID: 2036967266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailRightAttack4Sheet_5
+      name: TraiLeftAttack1Sheet_5
       rect:
         serializedVersion: 2
         x: 224
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8730f58127cf2f44a9128eba9ac70bb
-      internalID: -611110576
+      spriteID: d82f2e3b9b99e714494ae1453ed382b0
+      internalID: 1511147415
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TrailRightAttack4Sheet_6
+      name: TraiLeftAttack1Sheet_6
       rect:
         serializedVersion: 2
         x: 448
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 453af9f5cac9a464fa09da137deb7524
-      internalID: -130475668
+      spriteID: da4b9b0e8b617424e94329a790cdd68f
+      internalID: 1023343950
       vertices: []
       indices: 
       edges: []
@@ -267,13 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TrailRightAttack4Sheet_0: -631896889
-      TrailRightAttack4Sheet_1: -1027456510
-      TrailRightAttack4Sheet_2: 821038083
-      TrailRightAttack4Sheet_3: -1380078255
-      TrailRightAttack4Sheet_4: 262039320
-      TrailRightAttack4Sheet_5: -611110576
-      TrailRightAttack4Sheet_6: -130475668
+      TraiLeftAttack1Sheet_0: -271301980
+      TraiLeftAttack1Sheet_1: 84655284
+      TraiLeftAttack1Sheet_2: -10497938
+      TraiLeftAttack1Sheet_3: 1432953335
+      TraiLeftAttack1Sheet_4: 2036967266
+      TraiLeftAttack1Sheet_5: 1511147415
+      TraiLeftAttack1Sheet_6: 1023343950
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

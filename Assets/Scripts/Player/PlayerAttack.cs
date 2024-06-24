@@ -17,7 +17,8 @@ public class PlayerAttack : MonoBehaviour
 
     [SerializeField] private Transform _playerTransform;
     private Player _player;
-    public bool IsAttacking;
+    private Animator playerAnimator;
+    public bool isNextAttack;
     private bool attackDelay;
 
     public float attackingTime;
@@ -25,54 +26,60 @@ public class PlayerAttack : MonoBehaviour
 
     public void Start()
     {
-        IsAttacking = false;
+        isNextAttack = false;
         canAttack = true;
         attackDelay = false;
     }
     private void Awake()
     {
+        playerAnimator = gameObject.GetComponent<Animator>();
         _player = _playerTransform.gameObject.GetComponent<Player>();
     }
 
     private void Update()
     {
-        if ((Input.GetMouseButtonDown(0) && canAttack) ||(!IsAttacking && attackDelay))
+        if (!_player.isJumping && (Input.GetMouseButtonDown(0) || isNextAttack))
         {
-           StartCoroutine(Attack());
-        }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            StartCoroutine(AttackDelay());
+            if (canAttack)
+            {
+                Attack();
+            }
+            else
+            {
+                AttackDelay();
+            }
+            
         }
     }
 
-    private IEnumerator AttackDelay()
+    private void AttackDelay()
     {
-        attackDelay= true;
-        yield return new WaitForSeconds(0.1f);
-        attackDelay = false;
+        if (!isNextAttack && playerAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.4f)
+        {
+            isNextAttack = true;
+        }
     }
 
-    private IEnumerator Attack()
+    private void Attack()
     {
-        
-        _player.rb.velocity = new Vector2((Convert.ToInt32(_player.IsFacingRight) * 2 - 1) * _player.speed,_player.rb.velocity.y);
+
+        _player.IsMoving = false;
         canAttack = false;
-        IsAttacking = true;
-        _player.animator.SetBool("IsAttacking", IsAttacking);
-
-        yield return new WaitForSeconds(attackingTime);
-
+        _player.animator.SetBool("IsAttacking", !canAttack);
+        _player.rb.velocity = new Vector2((Convert.ToInt32(_player.IsFacingRight) * 2 - 1) * _player.speed*0.1f,_player.rb.velocity.y);
+        isNextAttack = false;
+        
+    }
+    public void stopAttack()
+    {
         if (_player.attackCounter >= 4)
         {
             _player.attackCounter = 0;
         }
 
-        IsAttacking = false;
+        _player.IsMoving = true;
         canAttack = true;
-        _player.animator.SetBool("IsAttacking", IsAttacking);
-
+        _player.animator.SetBool("IsAttacking", !canAttack);
 
         _player.attackCounter++;
         _player.animator.SetInteger("AttackCounter", _player.attackCounter);
@@ -105,4 +112,5 @@ public class PlayerAttack : MonoBehaviour
     {
         _player.swordTrail.SetBool("Attack2_Trail", false);
     }
+    
 }

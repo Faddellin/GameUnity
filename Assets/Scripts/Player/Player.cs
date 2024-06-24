@@ -5,7 +5,6 @@ using Cinemachine;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 
 namespace GameScene
@@ -300,7 +299,8 @@ namespace GameScene
 
         private void Die()
         {
-            Destroy(gameObject);
+            LevelManager.instance.GameOver();
+            gameObject.SetActive(false);
         }
 
         public void DashActivation()

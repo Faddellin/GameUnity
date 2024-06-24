@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GameScene;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class holdAndThrow : MonoBehaviour
 {

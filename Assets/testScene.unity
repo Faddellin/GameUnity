@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerTransform: {fileID: 1507954631}
   _player: {fileID: 384543455}
-  _flipRotationTime: 0.5
+  _flipRotationTime: 0.2
 --- !u!1 &384543449
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,8 +439,8 @@ MonoBehaviour:
     m_Bits: 128
   damage: 1
   _playerTransform: {fileID: 384543452}
-  IsAttacking: 0
-  attackingTime: 0.2
+  isNextAttack: 0
+  attackingTime: 0.25
   canAttack: 0
 --- !u!114 &384543457
 MonoBehaviour:
@@ -3292,9 +3292,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _allVirtualCameras:
   - {fileID: 2140818966}
-  _fallPanAmount: 0.25
-  _fallYPanTime: 0.5
-  _fallSpeedYDampingChangeThreshold: -15
+  _fallPanAmount: 1.58
+  _fallYPanTime: 143.92
+  _fallSpeedYDampingChangeThreshold: 0
 --- !u!1 &2101061201
 GameObject:
   m_ObjectHideFlags: 0

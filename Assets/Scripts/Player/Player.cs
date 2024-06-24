@@ -17,6 +17,7 @@ namespace GameScene
         public bool IsFacingRight;
         public bool IsFalling;
         public bool IsMoving;
+        public bool isJumping;
         public int extraJumps;
         private bool jumpDelay;
         public float fallingGravityScale;
@@ -86,6 +87,8 @@ namespace GameScene
 
             IsFalling = false;
 
+            isJumping = false;
+
             IsMoving = true;
 
             canDash = true;
@@ -142,7 +145,7 @@ namespace GameScene
         public void Strafe()
         {
             float movement;
-            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)) && !playeratak.IsAttacking)
+            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)) && playeratak.canAttack)
             {
                 movement = Input.GetAxis("Horizontal");
             }
@@ -153,6 +156,7 @@ namespace GameScene
 
             if (IsMoving)
             {
+                
                 rb.velocity = new Vector2(movement * speed, rb.velocity.y);
                 DashActivation();
                 animator.SetFloat("Speed", Mathf.Abs(movement));
@@ -188,13 +192,15 @@ namespace GameScene
             if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 && !onGround && !onWall)
             {
                 rb.AddForce(new Vector2(0, jumpForce - rb.velocity.y*rb.mass), ForceMode2D.Impulse);
-                animator.SetBool("Jump", true);
+                isJumping = true;
+                animator.SetBool("Jump", isJumping);
                 extraJumps--;
             }
             else if((Input.GetKeyDown(KeyCode.Space)||jumpDelay) && onGround)
             {
                 rb.AddForce(new Vector2(0, jumpForce - rb.velocity.y * rb.mass), ForceMode2D.Impulse);
-                animator.SetBool("Jump", true);
+                isJumping = true;
+                animator.SetBool("Jump", isJumping);
                 jumpDelay = false;
             }
             else if(Input.GetKeyDown(KeyCode.Space) && !jumpDelay)

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Attack4Right_Trail
+  m_Name: Attack3_Trail_R
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,19 +21,19 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -631896889, guid: c3186a307aeb6854fad5109f4094d5a8, type: 3}
+      value: {fileID: -1447669313, guid: bc522a7774c97794993891158554bb4d, type: 3}
     - time: 0.016666668
-      value: {fileID: -1027456510, guid: c3186a307aeb6854fad5109f4094d5a8, type: 3}
+      value: {fileID: 2031186061, guid: bc522a7774c97794993891158554bb4d, type: 3}
     - time: 0.033333335
-      value: {fileID: 821038083, guid: c3186a307aeb6854fad5109f4094d5a8, type: 3}
+      value: {fileID: 1520573289, guid: bc522a7774c97794993891158554bb4d, type: 3}
     - time: 0.05
-      value: {fileID: -1380078255, guid: c3186a307aeb6854fad5109f4094d5a8, type: 3}
+      value: {fileID: -1151104938, guid: bc522a7774c97794993891158554bb4d, type: 3}
     - time: 0.06666667
-      value: {fileID: 262039320, guid: c3186a307aeb6854fad5109f4094d5a8, type: 3}
+      value: {fileID: -1771511081, guid: bc522a7774c97794993891158554bb4d, type: 3}
     - time: 0.083333336
-      value: {fileID: -611110576, guid: c3186a307aeb6854fad5109f4094d5a8, type: 3}
+      value: {fileID: -448926595, guid: bc522a7774c97794993891158554bb4d, type: 3}
     - time: 0.1
-      value: {fileID: -130475668, guid: c3186a307aeb6854fad5109f4094d5a8, type: 3}
+      value: {fileID: 1945332117, guid: f20fbe7980eb43d4db1c9f9f55a84230, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -56,13 +56,13 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -631896889, guid: c3186a307aeb6854fad5109f4094d5a8, type: 3}
-    - {fileID: -1027456510, guid: c3186a307aeb6854fad5109f4094d5a8, type: 3}
-    - {fileID: 821038083, guid: c3186a307aeb6854fad5109f4094d5a8, type: 3}
-    - {fileID: -1380078255, guid: c3186a307aeb6854fad5109f4094d5a8, type: 3}
-    - {fileID: 262039320, guid: c3186a307aeb6854fad5109f4094d5a8, type: 3}
-    - {fileID: -611110576, guid: c3186a307aeb6854fad5109f4094d5a8, type: 3}
-    - {fileID: -130475668, guid: c3186a307aeb6854fad5109f4094d5a8, type: 3}
+    - {fileID: -1447669313, guid: bc522a7774c97794993891158554bb4d, type: 3}
+    - {fileID: 2031186061, guid: bc522a7774c97794993891158554bb4d, type: 3}
+    - {fileID: 1520573289, guid: bc522a7774c97794993891158554bb4d, type: 3}
+    - {fileID: -1151104938, guid: bc522a7774c97794993891158554bb4d, type: 3}
+    - {fileID: -1771511081, guid: bc522a7774c97794993891158554bb4d, type: 3}
+    - {fileID: -448926595, guid: bc522a7774c97794993891158554bb4d, type: 3}
+    - {fileID: 1945332117, guid: f20fbe7980eb43d4db1c9f9f55a84230, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -89,7 +89,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.1
-    functionName: stopAttack4Right_Trail
+    functionName: stopAttack3Right_Trail
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

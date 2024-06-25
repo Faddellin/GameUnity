@@ -10,6 +10,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     private Patroler enemyScript;
     private float stunTime;
     private bool IsStunned;
+    public bool IsDied = false;
 
     private void Start()
     {
@@ -45,6 +46,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
 
     private void Die()
     {
+        IsDied = true;
         Destroy(gameObject);
     }
 }

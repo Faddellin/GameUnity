@@ -26,6 +26,7 @@ namespace GameScene
         [Header("Player Interface")]
         public float health;
         public int heartsNum;
+        public bool damaged;
         public Image[] hearts;
         public Sprite fullHeart;
         public Sprite emptyHeart;
@@ -35,7 +36,7 @@ namespace GameScene
         public PlayerAttack playeratak;
         public Animator swordTrail;
         public int attackCounter;
-
+        public bool isThrowing;
 
         public Animator animator;
  
@@ -96,6 +97,10 @@ namespace GameScene
 
             jumpDelay = false;
 
+            isThrowing = false;
+
+            damaged = false;
+
             animator = GetComponent<Animator>();
 
             rb = GetComponent<Rigidbody2D>();
@@ -106,7 +111,6 @@ namespace GameScene
 
             _fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThreshold;
 
-            Physics2D.IgnoreLayerCollision(7, 10, true);
         }
 
         private void FixedUpdate()
@@ -145,7 +149,7 @@ namespace GameScene
         public void Strafe()
         {
             float movement;
-            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)) && playeratak.canAttack)
+            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)) && playeratak.canAttack && !isThrowing)
             {
                 movement = Input.GetAxis("Horizontal");
             }
@@ -270,30 +274,36 @@ namespace GameScene
         }
         public void Damage(float damage)
         {
-            health -= damage;
-            for (int i = 0; i < hearts.Length; i++)
+            if (!damaged)
             {
-                if (i < Mathf.RoundToInt(health))
+                damaged = true;
+                animator.SetBool("IsDamaged", damaged);
+                
+                health -= damage;
+                for (int i = 0; i < hearts.Length; i++)
                 {
-                    hearts[i].sprite = fullHeart;
-                }
-                else
-                {
-                    hearts[i].sprite = emptyHeart;
-                }
+                    if (i < Mathf.RoundToInt(health))
+                    {
+                        hearts[i].sprite = fullHeart;
+                    }
+                    else
+                    {
+                        hearts[i].sprite = emptyHeart;
+                    }
 
-                if (i < heartsNum)
-                {
-                    hearts[i].enabled = true;
+                    if (i < heartsNum)
+                    {
+                        hearts[i].enabled = true;
+                    }
+                    else
+                    {
+                        hearts[i].enabled = false;
+                    }
                 }
-                else
+                if (health <= 0f)
                 {
-                    hearts[i].enabled = false;
+                    Die();
                 }
-            }
-            if (health <= 0f)
-            {
-                Die();
             }
         }
 

@@ -34,6 +34,8 @@ public class PlayerAnimations : MonoBehaviour
     public Material forth_Attack_left;
     public Material third_Attack_left;
     public Material slide_left;
+    public Material throw_left;
+    public Material damaged_left;
 
     [Header("Materials Right")]
     public Material running_right;
@@ -45,6 +47,8 @@ public class PlayerAnimations : MonoBehaviour
     public Material forth_Attack_right;
     public Material third_Attack_right;
     public Material slide_right;
+    public Material throw_right;
+    public Material damaged_right;
     private void Update()
     {
         IsFacingRight = player.IsFacingRight;
@@ -140,6 +144,36 @@ public class PlayerAnimations : MonoBehaviour
                     break;
             }
         }
+    }
+
+    public void ThrowAnimation()
+    {
+        if (IsFacingRight)
+        {
+            sr.sharedMaterial = throw_right;
+        }
+        else
+        {
+            sr.sharedMaterial = throw_left;
+        }
+    }
+
+    public void GetDamagedAnimation()
+    {
+        if (IsFacingRight)
+        {
+            sr.sharedMaterial = damaged_right;
+        }
+        else
+        {
+            sr.sharedMaterial = damaged_left;
+        }
+    }
+
+    public void StopDamagingAnimation()
+    {
+        player.damaged = false;
+        player.animator.SetBool("IsDamaged",player.damaged);
     }
 
     public void SlidingAnimation()

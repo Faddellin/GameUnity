@@ -30,6 +30,7 @@ namespace GameScene
         public Image[] hearts;
         public Sprite fullHeart;
         public Sprite emptyHeart;
+        private bool isDeath;
 
 
         [Header("Attack")]
@@ -60,9 +61,12 @@ namespace GameScene
         public float dashPower = 24f;
         public float dashingTime = 0.2f;
         public float dashCooldown = 1f;
+        public int dashesAmount = 1;
 
         [Header("WallJump")]
         public bool onWall;
+        public bool canWallJump;
+        public float wallJumpCooldown;
         public Transform wallCheckUp;
         public Transform wallCheckDown;
         public Vector2 boxSize;
@@ -75,6 +79,10 @@ namespace GameScene
         public float angle = 0.0f;
         public LayerMask Ground;
         public LayerMask Wall;
+
+        [Header("Particles")]
+        public ParticleSystem wallSlideParticle;
+        public ParticleSystem extraJumpParticle;
 
 
         void Start()
@@ -101,6 +109,8 @@ namespace GameScene
 
             damaged = false;
 
+            isDeath = false;
+
             animator = GetComponent<Animator>();
 
             rb = GetComponent<Rigidbody2D>();
@@ -110,6 +120,9 @@ namespace GameScene
             followingCamera = cameraFollowGo.GetComponent<FollowingCameraObject>();
 
             _fallSpeedYDampingChangeThreshold = CameraManager.instance._fallSpeedYDampingChangeThreshold;
+
+            wallSlideParticle.Stop();
+            extraJumpParticle.Stop();
 
         }
 
@@ -121,6 +134,7 @@ namespace GameScene
         {
             WallJumpActivation();
             CheckingGround();
+            DashActivation();
             Strafe();
             Jump();
             GoDown();
@@ -162,7 +176,6 @@ namespace GameScene
             {
                 
                 rb.velocity = new Vector2(movement * speed, rb.velocity.y);
-                DashActivation();
                 animator.SetFloat("Speed", Mathf.Abs(movement));
                 
                 if (movement < 0 && IsFacingRight)
@@ -183,6 +196,8 @@ namespace GameScene
             wallCheckUp.transform.localPosition = new Vector3(-wallCheckUp.transform.localPosition.x, wallCheckUp.transform.localPosition.y, wallCheckUp.transform.localPosition.z);
             wallCheckDown.transform.localPosition = new Vector3(-wallCheckDown.transform.localPosition.x, wallCheckDown.transform.localPosition.y, wallCheckDown.transform.localPosition.z);
 
+            wallSlideParticle.transform.localPosition = new Vector3(-wallSlideParticle.transform.localPosition.x, wallSlideParticle.transform.localPosition.y, wallSlideParticle.transform.localPosition.z);
+
             _shurikenSpawnPoint.transform.localPosition = new Vector3(-_shurikenSpawnPoint.transform.localPosition.x, _shurikenSpawnPoint.transform.localPosition.y, _shurikenSpawnPoint.transform.localPosition.z);
             _playerArms.transform.localPosition = new Vector3(-_playerArms.transform.localPosition.x, _playerArms.transform.localPosition.y, _playerArms.transform.localPosition.z);
             _attackArea.transform.localPosition = new Vector3(-_attackArea.transform.localPosition.x, _attackArea.transform.localPosition.y, _attackArea.transform.localPosition.z);
@@ -198,6 +213,7 @@ namespace GameScene
             if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 && !onGround && !onWall)
             {
                 rb.AddForce(new Vector2(0, jumpForce - rb.velocity.y*rb.mass), ForceMode2D.Impulse);
+                extraJumpParticle.Play();
                 isJumping = true;
                 animator.SetBool("Jump", isJumping);
                 extraJumps--;
@@ -247,6 +263,7 @@ namespace GameScene
             {
                 IsFalling = false;
                 extraJumps = 1;
+                dashesAmount = 1;
                 animator.SetBool("IsFalling", IsFalling);
             }
         }
@@ -302,20 +319,28 @@ namespace GameScene
                 }
                 if (health <= 0f)
                 {
-                    Die();
+                    isDeath = true;
+                    animator.SetBool("IsDeath", isDeath);
                 }
             }
         }
 
-        private void Die()
+        public void Die()
         {
+            StartCoroutine(CallDieMenu());
+        }
+
+        private IEnumerator CallDieMenu()
+        {
+            yield return new WaitForSeconds(0.5f);
             LevelManager.instance.GameOver();
             gameObject.SetActive(false);
+
         }
 
         public void DashActivation()
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashesAmount > 0)
             {
                 StartCoroutine(Dash());
             }
@@ -324,8 +349,6 @@ namespace GameScene
         public Vector2 FindDirection()
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mousePos-=(Vector2)transform.position;
-            mousePos.Normalize();
             return mousePos;
         }
 
@@ -341,8 +364,22 @@ namespace GameScene
             Physics2D.IgnoreLayerCollision(7, 10, true);
 
             Vector2 direction = FindDirection();
-            float absolutePower = dashPower  * (Math.Abs(direction.x) + 0.5f);
-            Debug.Log(direction.x);
+            Vector2 nonNormilizeDir = direction;
+            direction -= (Vector2)transform.position;
+            direction.Normalize();
+
+            if (nonNormilizeDir.x - transform.position.x >= 0 && !IsFacingRight)
+            {
+                Flip();
+            }
+            else if (nonNormilizeDir.x - transform.position.x < 0 && IsFacingRight)
+            {
+                Flip();
+            }
+
+            float absolutePower = dashPower  * (0.5f + Math.Abs(direction.x) * 0.5f);
+
+            dashesAmount--;
 
             rb.velocity = direction * absolutePower;
 
@@ -374,8 +411,6 @@ namespace GameScene
             }
         }
 
-        public bool canWallJump;
-        public float wallJumpCooldown;
 
         private IEnumerator WallJump()
         {
@@ -394,17 +429,20 @@ namespace GameScene
             yield return new WaitForSeconds(wallJumpCooldown-0.1f);
             canWallJump = true;
             extraJumps = 1;
+            dashesAmount = 1;
         }
 
         public void WallSlide()
         {
             if(onWall && !onGround)
             {
+                wallSlideParticle.Play();
                 rb.gravityScale = 0;
                 rb.velocity = new Vector2(rb.velocity.x,-slideSpeed);
             }
             else
             {
+                wallSlideParticle.Stop();
                 rb.gravityScale = commonGravityScale;
             }
         }

@@ -36,6 +36,7 @@ public class PlayerAnimations : MonoBehaviour
     public Material slide_left;
     public Material throw_left;
     public Material damaged_left;
+    public Material death_left;
 
     [Header("Materials Right")]
     public Material running_right;
@@ -49,6 +50,7 @@ public class PlayerAnimations : MonoBehaviour
     public Material slide_right;
     public Material throw_right;
     public Material damaged_right;
+    public Material death_right;
     private void Update()
     {
         IsFacingRight = player.IsFacingRight;
@@ -167,6 +169,18 @@ public class PlayerAnimations : MonoBehaviour
         else
         {
             sr.sharedMaterial = damaged_left;
+        }
+    }
+
+    public void DeathAnimation()
+    {
+        if (IsFacingRight)
+        {
+            sr.sharedMaterial = death_right;
+        }
+        else
+        {
+            sr.sharedMaterial = death_left;
         }
     }
 

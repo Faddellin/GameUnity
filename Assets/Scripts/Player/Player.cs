@@ -311,6 +311,14 @@ namespace GameScene
             }
         }
 
+        public Vector2 FindDirection()
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePos-=(Vector2)transform.position;
+            mousePos.Normalize();
+            return mousePos;
+        }
+
         private IEnumerator Dash()
         {
             canDash = false;
@@ -322,7 +330,11 @@ namespace GameScene
 
             Physics2D.IgnoreLayerCollision(7, 10, true);
 
-            rb.velocity = new Vector2((Convert.ToInt32(IsFacingRight) * 2 - 1) * transform.localScale.x * dashPower, 0f);
+            Vector2 direction = FindDirection();
+            float absolutePower = dashPower  * (Math.Abs(direction.x) + 0.5f);
+            Debug.Log(direction.x);
+
+            rb.velocity = direction * absolutePower;
 
             yield return new WaitForSeconds(dashingTime);
 

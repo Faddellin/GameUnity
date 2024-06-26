@@ -21,6 +21,11 @@ public class Spike : MonoBehaviour
         }
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        CanDamage = true;
+    }
+
     private IEnumerator Wait()
     {
         Player.Damage(1f);

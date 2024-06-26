@@ -8,7 +8,6 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     [SerializeField] private ParticleSystem getDamaged;
     private float currentHealth;
     private Patroler enemyScript;
-    private float stunTime;
     private bool IsStunned;
     public bool IsDied = false;
 
@@ -16,34 +15,33 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     {
         currentHealth = maxHealth;
         enemyScript = gameObject.GetComponent<Patroler>();
-        stunTime = 0.3f;
         IsStunned = false;
     }
 
     public void Damage(float damage, bool direction)
     {
-        if (direction == enemyScript.faceRight)
-        {
-            enemyScript.Reflect();
-        }
-        Vector3 addPosHigh = new Vector3(0f, 2.5f, 0f);
-        ParticleSystem blood = Instantiate(getDamaged, transform.position+addPosHigh, transform.rotation);
-        ParticleSystem.VelocityOverLifetimeModule velocityOverLifetime = blood.velocityOverLifetime;
-
-        if (direction == true)
-        {
-            velocityOverLifetime.x = 3;
-        }
-        else
-        {
-            velocityOverLifetime.x = -3;
-        }
-        blood.Play();
-
-        currentHealth -= damage;
         if (!IsStunned)
         {
-            StartCoroutine(Stun());
+            StartStun();
+            if (direction == enemyScript.faceRight)
+            {
+                enemyScript.Reflect();
+            }
+            Vector3 addPosHigh = new Vector3(0f, 2.5f, 0f);
+            ParticleSystem blood = Instantiate(getDamaged, transform.position + addPosHigh, transform.rotation);
+            ParticleSystem.VelocityOverLifetimeModule velocityOverLifetime = blood.velocityOverLifetime;
+
+            if (direction == true)
+            {
+                velocityOverLifetime.x = 3;
+            }
+            else
+            {
+                velocityOverLifetime.x = -3;
+            }
+            blood.Play();
+
+            currentHealth -= damage;
         }
 
         if(currentHealth <= 0f) {
@@ -51,12 +49,17 @@ public class EnemyHealth : MonoBehaviour,IDamageable
         }
     }
 
-    private IEnumerator Stun()
+    public void  StartStun()
     {
         IsStunned = true;
-        enemyScript.enabled = false;
-        yield return new WaitForSeconds(stunTime);
+        enemyScript.animator.SetBool("IsStunned", IsStunned);
+        enemyScript.enabled = false; 
+    }
+
+    public void StopStun()
+    {
         IsStunned = false;
+        enemyScript.animator.SetBool("IsStunned", IsStunned);
         enemyScript.enabled = true;
     }
 

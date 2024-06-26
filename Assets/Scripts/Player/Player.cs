@@ -135,7 +135,6 @@ namespace GameScene
         }
         void Update()
         {
-            WallJumpActivation();
             CheckingGround();
             DashActivation();
             CheckDash();
@@ -167,7 +166,7 @@ namespace GameScene
         public void Strafe()
         {
             float movement;
-            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)) && playeratak.canAttack && !isThrowing)
+            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)) && playeratak.canAttack && !isThrowing && !damaged)
             {
                 movement = Input.GetAxis("Horizontal");
             }
@@ -176,7 +175,7 @@ namespace GameScene
                 movement = 0.0f;
             }
 
-            if (IsMoving)
+            if (IsMoving && !damaged)
             {
                 
                 rb.velocity = new Vector2(movement * speed, rb.velocity.y);
@@ -214,21 +213,29 @@ namespace GameScene
 
         public void Jump()
         {
-            if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 && !onGround && !onWall)
+            if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 && !onGround && !onWall && !damaged)
             {
+                Debug.Log("Jump");
                 rb.AddForce(new Vector2(0, jumpForce - rb.velocity.y*rb.mass), ForceMode2D.Impulse);
                 extraJumpParticle.Play();
                 isJumping = true;
                 animator.SetBool("Jump", isJumping);
                 extraJumps--;
             }
-            else if((Input.GetKeyDown(KeyCode.Space)||jumpDelay) && onGround)
+            else if((Input.GetKeyDown(KeyCode.Space)||jumpDelay) && onGround && !damaged)
             {
                 rb.AddForce(new Vector2(0, jumpForce - rb.velocity.y * rb.mass), ForceMode2D.Impulse);
                 isJumping = true;
                 animator.SetBool("Jump", isJumping);
                 jumpDelay = false;
             }
+
+            else if (!onGround && onWall && Input.GetKeyDown(KeyCode.Space) && canWallJump && !damaged)
+            {
+
+                    StartCoroutine(WallJump());
+            }
+
             else if(Input.GetKeyDown(KeyCode.Space) && !jumpDelay)
             {
                 StartCoroutine(JumpDelay());
@@ -363,7 +370,7 @@ namespace GameScene
 
         public void DashActivation()
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashesAmount > 0)
+            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && dashesAmount > 0 && !damaged)
             {
                 StartCoroutine(Dash());
             }
@@ -384,7 +391,6 @@ namespace GameScene
             float originalGravity = rb.gravityScale;
             rb.gravityScale = 0f;
 
-            Physics2D.IgnoreLayerCollision(7, 10, true);
 
             Vector2 direction = FindDirection();
             Vector2 nonNormilizeDir = direction;
@@ -440,27 +446,31 @@ namespace GameScene
            
         }
 
-        public void WallJumpActivation()
-        {
-            if (!onGround && onWall && Input.GetKeyDown(KeyCode.Space) && canWallJump)
-            {
-
-                StartCoroutine(WallJump());
-            }
-        }
-
-
         private IEnumerator WallJump()
         {
+            Debug.Log("WallJump");
             canWallJump = false;
             IsMoving = false;
             onWall = false;
 
-            rb.AddForce(new Vector2(-(Convert.ToInt32(IsFacingRight) * 2 - 1)*jumpForce*0.9f, jumpForce - rb.velocity.y * rb.mass),
+            float KirillKoef = 1.3f;
+
+            Vector2 direction = FindDirection();
+            direction -= (Vector2)transform.position;
+            direction.Normalize();
+            
+            if(direction.y < 0) {
+                rb.AddForce(new Vector2(jumpForce, jumpForce) * KirillKoef * direction,
             ForceMode2D.Impulse);
+            }
+            else
+            {
+                rb.AddForce(new Vector2(jumpForce, jumpForce - rb.velocity.y * rb.mass) * KirillKoef * direction,
+               ForceMode2D.Impulse);
+            }
 
             Flip();
-            animator.SetBool("IsRight", IsFacingRight);
+
 
             yield return new WaitForSeconds(0.18f);
             IsMoving = true;
@@ -472,7 +482,7 @@ namespace GameScene
 
         public void WallSlide()
         {
-            if(onWall && !onGround)
+            if(onWall && !onGround && !damaged)
             {
                 wallSlideParticle.Play();
                 rb.gravityScale = 0;
@@ -487,7 +497,7 @@ namespace GameScene
 
         public void GoDown()
         {
-            if(Input.GetKey(KeyCode.S))
+            if(Input.GetKey(KeyCode.S) && !damaged)
             {
                 Physics2D.IgnoreLayerCollision(10, 13, true);
                 Invoke("IgnoreLayerCollisionOff",0.5f);

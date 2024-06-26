@@ -30,6 +30,7 @@ public class EnemyAnimations : MonoBehaviour
     public Material second_Attack_right;
     public Material forth_Attack_right;
     public Material third_Attack_right;
+    public Material damaged_right;
 
     [Header("Material Left")]
     public Material running_left;
@@ -40,6 +41,7 @@ public class EnemyAnimations : MonoBehaviour
     public Material second_Attack_left;
     public Material forth_Attack_left;
     public Material third_Attack_left;
+    public Material damaged_left;
 
     private void Update()
     {
@@ -135,6 +137,19 @@ public class EnemyAnimations : MonoBehaviour
             }
         }
     }
+
+    public void Damaged()
+    {
+        if (IsFacingRight)
+        {
+            sr.sharedMaterial = damaged_right;
+        }
+        else
+        {
+            sr.sharedMaterial = damaged_left;
+        }
+    }
+
     public void startAttack2Right_Trail()
     {
         swordTrail.SetBool("Attack2Right_Trail", true);

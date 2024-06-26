@@ -11,7 +11,7 @@ public class PlayerAttack : MonoBehaviour
 {
     private RaycastHit2D[] hits;
     [SerializeField] private Transform attackTransform;
-    [SerializeField] private float attackRange = 1.5f;
+    [SerializeField] private float attackRange = 2.2f;
     [SerializeField] private LayerMask attackableLayer;
     [SerializeField] private float damage = 1f;
 
@@ -93,7 +93,7 @@ public class PlayerAttack : MonoBehaviour
 
             if (IDamageable != null)
             {
-                IDamageable.Damage(damage);
+                IDamageable.Damage(damage,_player.IsFacingRight);
             }
         }
     }

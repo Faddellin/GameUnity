@@ -7,13 +7,12 @@ public class Bullet : MonoBehaviour
 {
 
     [SerializeField] private float normalBulletSpeed = 15f;
-    [SerializeField] private float destroyTime = 3f;
     [SerializeField] private LayerMask desturctionLayer;
     private Rigidbody2D rb;
+    private bool directionOfShuriken;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        DestroyBullet();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,7 +22,15 @@ public class Bullet : MonoBehaviour
             IDamageable IDamageable = collision.gameObject.GetComponent<IDamageable>();
             if (IDamageable != null)
             {
-                IDamageable.Damage(1f);
+                if(rb.velocity.x <= 0)
+                {
+                    directionOfShuriken = false;
+                }
+                else
+                {
+                    directionOfShuriken = true;
+                }
+                IDamageable.Damage(1f,directionOfShuriken);
             }
             Destroy(gameObject);
         }
@@ -39,10 +46,5 @@ public class Bullet : MonoBehaviour
         {
             rb.velocity = -transform.right * normalBulletSpeed;
         }
-    }
-
-    private void DestroyBullet()
-    {
-        Destroy(gameObject,destroyTime);
     }
 }

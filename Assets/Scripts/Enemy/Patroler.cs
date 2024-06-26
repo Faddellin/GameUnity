@@ -150,7 +150,7 @@ public class Patroler : MonoBehaviour
     {
         if (isAttacking && canAttack)
         {
-            StartCoroutine(Attack());
+            StartAttack();
         }
         else if (Player.position.x > transform.position.x && canAttack)
         {
@@ -178,7 +178,7 @@ public class Patroler : MonoBehaviour
         }
     }
 
-    void Reflect()
+    public void Reflect()
     {
         if ((curX - prevX < 0 && faceRight) || (curX - prevX > 0 && !faceRight))
         {
@@ -190,24 +190,26 @@ public class Patroler : MonoBehaviour
         }
     }
 
-    private IEnumerator Attack()
+    public void StartAttack()
     {
         canAttack = false;
         rb.velocity = new Vector2 (0, rb.velocity.y);
         animator.SetFloat("Speed", 0);
         animator.SetBool("IsAttacking", !canAttack);
 
-        yield return new WaitForSeconds(attackingTime);
-
         if (attackCounter >= 4)
         {
             attackCounter = 0;
             
         }
+    }
+
+    public void StopAttack()
+    {
         canAttack = true;
         animator.SetBool("IsAttacking", !canAttack);
         attackCounter++;
-        animator.SetInteger("attackCount",attackCounter);
+        animator.SetInteger("attackCount", attackCounter);
     }
 
     public void check()
@@ -220,7 +222,7 @@ public class Patroler : MonoBehaviour
 
             if (IDamageable != null)
             {
-                IDamageable.Damage(damage);
+                IDamageable.Damage(damage,faceRight);
             }
         }
     }

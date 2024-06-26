@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour,IDamageable
 {
-    [SerializeField] private float maxHealth = 3f;
-
+    [SerializeField] private float maxHealth;
+    [SerializeField] private ParticleSystem getDamaged;
     private float currentHealth;
     private Patroler enemyScript;
     private float stunTime;
@@ -20,10 +20,27 @@ public class EnemyHealth : MonoBehaviour,IDamageable
         IsStunned = false;
     }
 
-    public void Damage(float damage)
+    public void Damage(float damage, bool direction)
     {
-        currentHealth -= damage;
+        if (direction == enemyScript.faceRight)
+        {
+            enemyScript.Reflect();
+        }
+        Vector3 addPosHigh = new Vector3(0f, 2.5f, 0f);
+        ParticleSystem blood = Instantiate(getDamaged, transform.position+addPosHigh, transform.rotation);
+        ParticleSystem.VelocityOverLifetimeModule velocityOverLifetime = blood.velocityOverLifetime;
 
+        if (direction == true)
+        {
+            velocityOverLifetime.x = 3;
+        }
+        else
+        {
+            velocityOverLifetime.x = -3;
+        }
+        blood.Play();
+
+        currentHealth -= damage;
         if (!IsStunned)
         {
             StartCoroutine(Stun());
@@ -36,7 +53,6 @@ public class EnemyHealth : MonoBehaviour,IDamageable
 
     private IEnumerator Stun()
     {
-        Debug.Log("EnemyStunned");
         IsStunned = true;
         enemyScript.enabled = false;
         yield return new WaitForSeconds(stunTime);

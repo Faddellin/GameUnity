@@ -57,11 +57,13 @@ namespace GameScene
         private Transform _shurikenSpawnPoint;
 
         [Header("Dash")]
+        private float lastImageXpos;
         public bool canDash;
         public float dashPower = 24f;
         public float dashingTime = 0.2f;
         public float dashCooldown = 1f;
         public int dashesAmount = 1;
+        public float distanceBetweenImages;
 
         [Header("WallJump")]
         public bool onWall;
@@ -83,6 +85,7 @@ namespace GameScene
         [Header("Particles")]
         public ParticleSystem wallSlideParticle;
         public ParticleSystem extraJumpParticle;
+        public ParticleSystem blood;
 
 
         void Start()
@@ -135,6 +138,7 @@ namespace GameScene
             WallJumpActivation();
             CheckingGround();
             DashActivation();
+            CheckDash();
             Strafe();
             Jump();
             GoDown();
@@ -289,13 +293,32 @@ namespace GameScene
             // —брасываем матрицу трансформации Gizmos
             Gizmos.matrix = Matrix4x4.identity;
         }
-        public void Damage(float damage)
+        public void Damage(float damage, bool direction)
         {
+            Vector3 addPosHigh = new Vector3(0f, 2.5f, 0f);
+            ParticleSystem bloodParticles = Instantiate(blood, transform.position + addPosHigh, transform.rotation);
+            ParticleSystem.VelocityOverLifetimeModule velocityOverLifetime = blood.velocityOverLifetime;
+
             if (!damaged)
             {
                 damaged = true;
+
+                if (direction == IsFacingRight) {
+                    Flip();
+                }
                 animator.SetBool("IsDamaged", damaged);
-                
+
+                if(direction == true)
+                {
+                    velocityOverLifetime.x = 3;
+                }
+                else
+                {
+                    velocityOverLifetime.x = -3;
+                }
+
+                bloodParticles.Play();
+
                 health -= damage;
                 for (int i = 0; i < hearts.Length; i++)
                 {
@@ -379,6 +402,9 @@ namespace GameScene
 
             float absolutePower = dashPower  * (0.5f + Math.Abs(direction.x) * 0.5f);
 
+            AfterImagePool.instance.GetFromPool();
+            lastImageXpos = transform.position.x;
+
             dashesAmount--;
 
             rb.velocity = direction * absolutePower;
@@ -393,6 +419,18 @@ namespace GameScene
 
             yield return new WaitForSeconds(dashCooldown);
             canDash = true;
+        }
+
+        private void CheckDash()
+        {
+            if (!canDash)
+            {
+                if (Mathf.Abs(transform.position.x - lastImageXpos) > distanceBetweenImages)
+                {
+                    AfterImagePool.instance.GetFromPool();
+                    lastImageXpos = transform.position.x;
+                }
+            }
         }
 
         public void CheckingWall()

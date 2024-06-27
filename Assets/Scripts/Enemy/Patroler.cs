@@ -13,7 +13,7 @@ public class Patroler : MonoBehaviour
     public bool wait;
 
     public Transform Point;
-    private Animator animator;
+    public Animator animator;
 
     private bool MovingRight;
     public Transform Player;

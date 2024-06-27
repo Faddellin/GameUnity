@@ -25,6 +25,7 @@ public class AimAndShoot : MonoBehaviour
 
     public void ShurikenInstantiate()
     {
+        _player.shurikenSound.Play();
         bulletInst = Instantiate(bullet, bulletSpawnPoint.position, bulletSpawnPoint.transform.rotation);
         bulletScript = bulletInst.GetComponent<Bullet>();
         bulletScript.SetStraightVelosity(_player.IsFacingRight, bulletInst.GetComponent<Rigidbody2D>());

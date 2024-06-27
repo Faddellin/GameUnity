@@ -11,10 +11,14 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     private bool IsStunned;
     public bool IsDied = false;
 
+    public GameObject damageAudio;
+    private AudioSource damageAudioSource;
+
     private void Start()
     {
         currentHealth = maxHealth;
         enemyScript = gameObject.GetComponent<Patroler>();
+        damageAudioSource = damageAudio.GetComponent<AudioSource>();
         IsStunned = false;
     }
 
@@ -22,6 +26,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     {
         if (!IsStunned)
         {
+            damageAudioSource.Play();
             StartStun();
             if (direction == enemyScript.faceRight)
             {

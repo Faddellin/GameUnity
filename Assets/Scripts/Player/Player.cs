@@ -77,8 +77,10 @@ namespace GameScene
         public bool onGround;
         public float slideSpeed;
         public Transform GroundCheck;
+
         public Vector2 size = new Vector2(2.0f, 1.0f);
         public float angle = 0.0f;
+
         public LayerMask Ground;
         public LayerMask Wall;
 
@@ -87,10 +89,34 @@ namespace GameScene
         public ParticleSystem extraJumpParticle;
         public ParticleSystem blood;
 
+        [Header("Sounds")]
+        public GameObject dashSound;
+        private AudioSource dashAudio;
+
+        public GameObject throwShuriken;
+        public AudioSource shurikenSound;
+
+        public GameObject katana;
+        public AudioSource katanaSwingAir;
+
+        public GameObject extraJumpSound;
+        private AudioSource extraJumpAudio;
+
+        private AudioSource playerAudio;
 
         void Start()
         {
-            boxSize = wallCheckUp.GetComponent<BoxCollider2D>().size;
+            playerAudio = GetComponent<AudioSource>();
+
+            dashAudio = dashSound.GetComponent<AudioSource>();
+
+            extraJumpAudio = extraJumpSound.GetComponent<AudioSource>();
+
+            shurikenSound = throwShuriken.GetComponent<AudioSource>();
+
+            katanaSwingAir = katana.GetComponent<AudioSource>(); 
+
+          boxSize = wallCheckUp.GetComponent<BoxCollider2D>().size;
 
             playeratak = gameObject.GetComponent<PlayerAttack>();
 
@@ -215,9 +241,11 @@ namespace GameScene
         {
             if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0 && !onGround && !onWall && !damaged)
             {
-                Debug.Log("Jump");
                 rb.AddForce(new Vector2(0, jumpForce - rb.velocity.y*rb.mass), ForceMode2D.Impulse);
+                extraJumpAudio.Play();
+
                 extraJumpParticle.Play();
+
                 isJumping = true;
                 animator.SetBool("Jump", isJumping);
                 extraJumps--;
@@ -309,6 +337,8 @@ namespace GameScene
             if (!damaged)
             {
                 damaged = true;
+
+                playerAudio.Play();
 
                 if (direction == IsFacingRight) {
                     Flip();
@@ -407,7 +437,7 @@ namespace GameScene
             }
 
             float absolutePower = dashPower  * (0.5f + Math.Abs(direction.x) * 0.5f);
-
+            dashAudio.Play();
             AfterImagePool.instance.GetFromPool();
             lastImageXpos = transform.position.x;
 
@@ -453,19 +483,19 @@ namespace GameScene
             IsMoving = false;
             onWall = false;
 
-            float KirillKoef = 1.3f;
+            float KirillKoef = 1.5f;
 
             Vector2 direction = FindDirection();
             direction -= (Vector2)transform.position;
             direction.Normalize();
             
             if(direction.y < 0) {
-                rb.AddForce(new Vector2(jumpForce, jumpForce) * KirillKoef * direction,
+                rb.AddForce(new Vector2(jumpForce * KirillKoef, jumpForce) * direction,
             ForceMode2D.Impulse);
             }
             else
             {
-                rb.AddForce(new Vector2(jumpForce, jumpForce - rb.velocity.y * rb.mass) * KirillKoef * direction,
+                rb.AddForce(new Vector2(jumpForce * KirillKoef, jumpForce - rb.velocity.y * rb.mass) * direction,
                ForceMode2D.Impulse);
             }
 

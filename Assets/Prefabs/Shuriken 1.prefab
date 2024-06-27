@@ -162,8 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0544b45bca175c348a3780d71c52982b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalBulletSpeed: 15
-  destroyTime: 3
+  normalBulletSpeed: 45
   desturctionLayer:
     serializedVersion: 2
     m_Bits: 4288

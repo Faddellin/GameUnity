@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using GameScene;
+using Unity.PlasticSCM.Editor.WebApi;
 
 public class AimAndShoot : MonoBehaviour
 {
@@ -41,6 +42,10 @@ public class AimAndShoot : MonoBehaviour
 
             UpdateInterface();
         }
+        else if(_player.currentShurikenAmount == 0)
+        {
+            FillShurikens();
+        }
     }
 
     private void UpdateInterface()
@@ -64,6 +69,16 @@ public class AimAndShoot : MonoBehaviour
             {
                 _player.shurikens[i].enabled = false;
             }
+        }
+    }
+
+    public void FillShurikens()
+    {
+        _player.currentShurikenAmount = _player.maxShurikenAmount;
+
+        for (int i = 0; i < _player.shurikens.Length; i++)
+        {
+            _player.shurikens[i].enabled = true;
         }
     }
     

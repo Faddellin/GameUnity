@@ -5,6 +5,7 @@ using Cinemachine;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 
 namespace GameScene
@@ -397,6 +398,16 @@ namespace GameScene
                 }
             }
         }
+        public void FillShurikens()
+        {
+            currentShurikenAmount = maxShurikenAmount;
+
+            for (int i = 0; i < shurikens.Length; i++)
+            {
+               shurikens[i].enabled = true;
+               shurikens[i].sprite = fullShuriken;
+            }
+        }
 
         public void Die()
         {
@@ -502,26 +513,20 @@ namespace GameScene
             Vector2 direction = FindDirection();
             direction -= (Vector2)transform.position;
             direction.Normalize();
-            
-            if(direction.y < 0) {
-                rb.AddForce(new Vector2(jumpForce * KirillKoef, jumpForce) * direction,
-            ForceMode2D.Impulse);
-            }
-            else
-            {
-                rb.AddForce(new Vector2(jumpForce * KirillKoef, jumpForce - rb.velocity.y * rb.mass) * direction,
+
+            rb.velocity = new Vector2(0, 0);
+            rb.AddForce(new Vector2(jumpForce * KirillKoef, jumpForce) * direction,
                ForceMode2D.Impulse);
-            }
 
             Flip();
 
-
-            yield return new WaitForSeconds(0.18f);
-            IsMoving = true;
-            yield return new WaitForSeconds(wallJumpCooldown-0.1f);
             canWallJump = true;
             extraJumps = 1;
             dashesAmount = 1;
+            yield return new WaitForSeconds(0.18f);
+            IsMoving = true;
+            //yield return new WaitForSeconds(wallJumpCooldown-0.18f);
+
         }
 
         public void WallSlide()

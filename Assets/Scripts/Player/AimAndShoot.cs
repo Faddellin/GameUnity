@@ -42,10 +42,6 @@ public class AimAndShoot : MonoBehaviour
 
             UpdateInterface();
         }
-        else if(_player.currentShurikenAmount == 0)
-        {
-            FillShurikens();
-        }
     }
 
     private void UpdateInterface()
@@ -69,16 +65,6 @@ public class AimAndShoot : MonoBehaviour
             {
                 _player.shurikens[i].enabled = false;
             }
-        }
-    }
-
-    public void FillShurikens()
-    {
-        _player.currentShurikenAmount = _player.maxShurikenAmount;
-
-        for (int i = 0; i < _player.shurikens.Length; i++)
-        {
-            _player.shurikens[i].enabled = true;
         }
     }
     

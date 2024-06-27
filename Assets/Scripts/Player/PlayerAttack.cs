@@ -64,6 +64,7 @@ public class PlayerAttack : MonoBehaviour
         _player.IsMoving = false;
         canAttack = false;
         _player.animator.SetBool("IsAttacking", !canAttack);
+        _player.katanaSwingAir.Play();
         _player.rb.velocity = new Vector2((Convert.ToInt32(_player.IsFacingRight) * 2 - 1) * _player.speed*0.1f,_player.rb.velocity.y);
         isNextAttack = false;
         

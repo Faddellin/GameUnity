@@ -13,6 +13,7 @@ public class AimAndShoot : MonoBehaviour
     private GameObject bulletInst;
     private Bullet bulletScript;
 
+ 
     private void Awake()
     {
         _player = Player.GetComponent<Player>();
@@ -25,16 +26,44 @@ public class AimAndShoot : MonoBehaviour
 
     public void ShurikenInstantiate()
     {
+        _player.shurikenSound.Play();
         bulletInst = Instantiate(bullet, bulletSpawnPoint.position, bulletSpawnPoint.transform.rotation);
         bulletScript = bulletInst.GetComponent<Bullet>();
         bulletScript.SetStraightVelosity(_player.IsFacingRight, bulletInst.GetComponent<Rigidbody2D>());
     }
     private void HandleGunShooting()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && !_player.isThrowing)
+        if (Input.GetKeyDown(KeyCode.Q) && !_player.isThrowing && _player.currentShurikenAmount > 0)
         {
             _player.isThrowing = true;
             _player.animator.SetBool("IsThrowing", _player.isThrowing);
+            _player.currentShurikenAmount--;
+
+            UpdateInterface();
+        }
+    }
+
+    private void UpdateInterface()
+    {
+        for (int i = 0; i < _player.shurikens.Length; i++)
+        {
+            if (i < Mathf.RoundToInt(_player.currentShurikenAmount))
+            {
+                _player.shurikens[i].sprite = _player.fullShuriken;
+            }
+            else
+            {
+                _player.shurikens[i].sprite = _player.emptyShuriken;
+            }
+
+            if (i < _player.maxShurikenAmount)
+            {
+                _player.shurikens[i].enabled = true;
+            }
+            else
+            {
+                _player.shurikens[i].enabled = false;
+            }
         }
     }
     

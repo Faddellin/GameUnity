@@ -27,9 +27,20 @@ namespace GameScene
         public float health;
         public int heartsNum;
         public bool damaged;
+
         public Image[] hearts;
         public Sprite fullHeart;
         public Sprite emptyHeart;
+
+        public int maxShurikenAmount;
+        public int currentShurikenAmount;
+
+        public Image[] shurikens;
+        public Sprite fullShuriken;
+        public Sprite emptyShuriken;
+
+
+
         private bool isDeath;
 
 
@@ -116,7 +127,7 @@ namespace GameScene
 
             katanaSwingAir = katana.GetComponent<AudioSource>(); 
 
-          boxSize = wallCheckUp.GetComponent<BoxCollider2D>().size;
+            boxSize = wallCheckUp.GetComponent<BoxCollider2D>().size;
 
             playeratak = gameObject.GetComponent<PlayerAttack>();
 
@@ -152,6 +163,8 @@ namespace GameScene
 
             wallSlideParticle.Stop();
             extraJumpParticle.Stop();
+
+            currentShurikenAmount = maxShurikenAmount;
 
         }
 
@@ -438,6 +451,7 @@ namespace GameScene
 
             float absolutePower = dashPower  * (0.5f + Math.Abs(direction.x) * 0.5f);
             dashAudio.Play();
+
             AfterImagePool.instance.GetFromPool();
             lastImageXpos = transform.position.x;
 

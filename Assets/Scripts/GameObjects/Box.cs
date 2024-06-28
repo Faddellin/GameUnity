@@ -15,7 +15,7 @@ public class Box : MonoBehaviour,IDamageable
     {
         audioS = audioSource.GetComponent<AudioSource>();
     }
-    public void Damage(float damage,bool direction)
+    public void Damage(float damage,bool direction,AudioSource destroySound)
     {
         audioS.Play();
         ParticleSystem destroyEffectPrefab = Instantiate(destroyEffect, transform.position, transform.rotation);

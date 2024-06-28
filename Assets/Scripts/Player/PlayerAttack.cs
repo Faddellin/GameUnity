@@ -36,7 +36,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (!_player.isJumping && (Input.GetMouseButtonDown(0) || isNextAttack))
+        if (!_player.isJumping && (Input.GetMouseButtonDown(0) || isNextAttack) && !_player.damaged)
         {
             if (canAttack)
             {
@@ -94,7 +94,7 @@ public class PlayerAttack : MonoBehaviour
 
             if (IDamageable != null)
             {
-                IDamageable.Damage(damage,_player.IsFacingRight);
+                IDamageable.Damage(damage,_player.IsFacingRight, null);
             }
         }
     }

@@ -1,0 +1,1227 @@
+fileFormatVersion: 2
+guid: 40bd771c626d7b44eba1bfb1648d7385
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LeftAttackSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d9539ef6249584f8956bbb55b1cfb7
+      internalID: -814209536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_1
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fff2b94678ee6248bf7929ac2df1314
+      internalID: -468402901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_2
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92bf0ef2b2cbe7749a954511dd498fca
+      internalID: 636979358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_3
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b346d74a924b3fd49974661fe6cf5d0f
+      internalID: -929413131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315f9b7ca77f35144b90cb100b29285b
+      internalID: -1531317815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a630b75698ead0b4caa3468f91d88cb6
+      internalID: 675116158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3543c76dd9cc54f4bbfc5a0e1d4a76d3
+      internalID: -422355052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_7
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb40afaa8416c14e9e727ea4be6dc31
+      internalID: -174154795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_8
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3433d68f405e14ba9b4fadc5aea23c
+      internalID: 1285259965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_9
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9989e0c0a07ebe4cb46b1d6a9859200
+      internalID: -1553676956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997c5addd54ca144d977ecfc65d4ebe2
+      internalID: 1029550263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d819760cfd4f904fb2a91d663d18722
+      internalID: -91937967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3c8ae07ad354b44a345865895339c2
+      internalID: 47409803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_13
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736cf075587abfe42adba6b62f519684
+      internalID: -1130075338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_14
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e55ca20e26d5ae4d8a5ee272237b610
+      internalID: 1824641617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_15
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da894d2826b45645bd0bfc0d5305451
+      internalID: -1292774700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1eec3e62f797084cb14a5632cc62bb6
+      internalID: -107857569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e74ae422a58a804fa709e0502dbca2d
+      internalID: 1087221876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563633e88e51d604193ac3a8a23f10aa
+      internalID: 2053630334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_19
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c40a0cbcfa81454cb65f8e4d2254fa1
+      internalID: 749106316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_20
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 281d457a977896c44960ddcdf03f73da
+      internalID: -1485356552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_21
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c2c8f57f981cf409ec2ffea88e2829
+      internalID: 40978520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4006f1b7140ae4d8ed0d607a6f7d34
+      internalID: -582372592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde121f5e9da4a94081906621d66bd44
+      internalID: 2025103096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5acd679b034564c9f0a6ce0dadb87f
+      internalID: -159753896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_25
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1797fed109e2be4fbb36ad1d71f416a
+      internalID: -866466810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_26
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eef09e613189404f89ed2adf1a1a766
+      internalID: -215856963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_27
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45382d4df43aae4f8d869ad09058e47
+      internalID: -571098468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_28
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40646446932d03c4ab1fa88fd8537f8d
+      internalID: -1717391494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_29
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1968c4c2e85ac428822e5d24805b9e
+      internalID: 1925970890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4640aaf64f43264409b3dd664a8c75de
+      internalID: -1294210668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_31
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80fc18e355b1012488b32dd40b75b850
+      internalID: -2057418515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_32
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5168a0fa3ace8945893aa021da8509c
+      internalID: -1391010034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_33
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef4b97ff5efbc34b8c7b8536f5bd509
+      internalID: 83426051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_34
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b6f34da818de647ab7996b8e9579b5
+      internalID: -1301973585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_35
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1bf22a8ea8e7a846aed86f6b0bcb459
+      internalID: -781580958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a057ea9ad9ef3f4c8829ecc91932a14
+      internalID: -1440501068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_37
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2105512e24c45ca419837dd68d57cc33
+      internalID: 1697182749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_38
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85565f7373f3c54418117049d99f09e2
+      internalID: -46956153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_39
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d66109e2d25db4591a5963741cb149
+      internalID: -781642320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_40
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483deb0a6d2f76e4590bc08b808cbd11
+      internalID: 541493291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_41
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61fbcdc697ce2d648b534b1dbf9be31b
+      internalID: 2099853404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea556797e3592e64485be2bf60ec8d6e
+      internalID: -870526246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_43
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b8e016dd18eb54dbe0797cdf9cab43
+      internalID: -429281811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_44
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e30f4e40176294d8d2ffbeae03f802
+      internalID: -2143607878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_45
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda87a4803f2e7d4680ca3bbbae15942
+      internalID: -1684280397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9740eaca685f2eb4d8dc0f3c562c66d7
+      internalID: -243992537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_47
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c354916fa0928b48b718199ffff685e
+      internalID: -487452412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 284
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6098d8efa42c82a4eb74eb12b9f54d72
+      internalID: -640059239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftAttackSheet_49
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 284
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7bbea30636ffe646b3743a9f82cc054
+      internalID: -913441560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      LeftAttackSheet_0: -814209536
+      LeftAttackSheet_1: -468402901
+      LeftAttackSheet_10: 1029550263
+      LeftAttackSheet_11: -91937967
+      LeftAttackSheet_12: 47409803
+      LeftAttackSheet_13: -1130075338
+      LeftAttackSheet_14: 1824641617
+      LeftAttackSheet_15: -1292774700
+      LeftAttackSheet_16: -107857569
+      LeftAttackSheet_17: 1087221876
+      LeftAttackSheet_18: 2053630334
+      LeftAttackSheet_19: 749106316
+      LeftAttackSheet_2: 636979358
+      LeftAttackSheet_20: -1485356552
+      LeftAttackSheet_21: 40978520
+      LeftAttackSheet_22: -582372592
+      LeftAttackSheet_23: 2025103096
+      LeftAttackSheet_24: -159753896
+      LeftAttackSheet_25: -866466810
+      LeftAttackSheet_26: -215856963
+      LeftAttackSheet_27: -571098468
+      LeftAttackSheet_28: -1717391494
+      LeftAttackSheet_29: 1925970890
+      LeftAttackSheet_3: -929413131
+      LeftAttackSheet_30: -1294210668
+      LeftAttackSheet_31: -2057418515
+      LeftAttackSheet_32: -1391010034
+      LeftAttackSheet_33: 83426051
+      LeftAttackSheet_34: -1301973585
+      LeftAttackSheet_35: -781580958
+      LeftAttackSheet_36: -1440501068
+      LeftAttackSheet_37: 1697182749
+      LeftAttackSheet_38: -46956153
+      LeftAttackSheet_39: -781642320
+      LeftAttackSheet_4: -1531317815
+      LeftAttackSheet_40: 541493291
+      LeftAttackSheet_41: 2099853404
+      LeftAttackSheet_42: -870526246
+      LeftAttackSheet_43: -429281811
+      LeftAttackSheet_44: -2143607878
+      LeftAttackSheet_45: -1684280397
+      LeftAttackSheet_46: -243992537
+      LeftAttackSheet_47: -487452412
+      LeftAttackSheet_48: -640059239
+      LeftAttackSheet_49: -913441560
+      LeftAttackSheet_5: 675116158
+      LeftAttackSheet_6: -422355052
+      LeftAttackSheet_7: -174154795
+      LeftAttackSheet_8: 1285259965
+      LeftAttackSheet_9: -1553676956
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

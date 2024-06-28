@@ -30,7 +30,7 @@ public class Bullet : MonoBehaviour
                 {
                     directionOfShuriken = true;
                 }
-                IDamageable.Damage(1f,directionOfShuriken);
+                IDamageable.Damage(1f,directionOfShuriken, null);
             }
             Destroy(gameObject);
         }

@@ -62,6 +62,8 @@ namespace GameScene
         [Header("Cameras")]
         private FollowingCameraObject followingCamera;
         private float _fallSpeedYDampingChangeThreshold;
+        public CinemachineImpulseSource BossimpulseSource;
+        public CinemachineImpulseSource DefaultimpulseSource;
 
         [Header("Arms")]
         public Transform _playerArms;
@@ -108,13 +110,16 @@ namespace GameScene
         public GameObject throwShuriken;
         public AudioSource shurikenSound;
 
+        public GameObject shurikenFill;
+        private AudioSource shurikenFillSound;
+
         public GameObject katana;
         public AudioSource katanaSwingAir;
 
         public GameObject extraJumpSound;
         private AudioSource extraJumpAudio;
 
-        private AudioSource playerAudio;
+        public AudioSource playerAudio;
 
         void Start()
         {
@@ -125,6 +130,8 @@ namespace GameScene
             extraJumpAudio = extraJumpSound.GetComponent<AudioSource>();
 
             shurikenSound = throwShuriken.GetComponent<AudioSource>();
+
+            shurikenFillSound = shurikenFill.GetComponent<AudioSource>();
 
             katanaSwingAir = katana.GetComponent<AudioSource>(); 
 
@@ -321,28 +328,7 @@ namespace GameScene
             }
         }
 
-
-        void OnDrawGizmos()
-        {
-            DrawOverlapBox();
-        }
-
-        void DrawOverlapBox()
-        {
-            // Устанавливаем цвет Gizmos
-            Gizmos.color = Color.red;
-
-            // Создаем матрицу трансформации для поворота и перемещения бокса
-            Matrix4x4 rotationMatrix = Matrix4x4.TRS(GroundCheck.position, Quaternion.Euler(0, 0, angle), Vector3.one);
-            Gizmos.matrix = rotationMatrix;
-
-            // Рисуем проволочный куб (бокс)
-            Gizmos.DrawWireCube(Vector3.zero, boxSize);
-
-            // Сбрасываем матрицу трансформации Gizmos
-            Gizmos.matrix = Matrix4x4.identity;
-        }
-        public void Damage(float damage, bool direction)
+        public void Damage(float damage, bool direction, AudioSource damageSound)
         {
             Vector3 addPosHigh = new Vector3(0f, 2.5f, 0f);
             ParticleSystem bloodParticles = Instantiate(blood, transform.position + addPosHigh, transform.rotation);
@@ -352,7 +338,7 @@ namespace GameScene
             {
                 damaged = true;
 
-                playerAudio.Play();
+                damageSound.Play();
 
                 if (direction == IsFacingRight) {
                     Flip();
@@ -370,7 +356,17 @@ namespace GameScene
 
                 bloodParticles.Play();
 
+                if(damage == 2)
+                {
+                    BossimpulseSource.GenerateImpulse();
+                }
+                else
+                {
+                    DefaultimpulseSource.GenerateImpulse();
+                }
+
                 health -= damage;
+                
                 for (int i = 0; i < hearts.Length; i++)
                 {
                     if (i < Mathf.RoundToInt(health))
@@ -401,7 +397,7 @@ namespace GameScene
         public void FillShurikens()
         {
             currentShurikenAmount = maxShurikenAmount;
-
+            shurikenFillSound.Play();
             for (int i = 0; i < shurikens.Length; i++)
             {
                shurikens[i].enabled = true;
@@ -503,7 +499,6 @@ namespace GameScene
 
         private IEnumerator WallJump()
         {
-            Debug.Log("WallJump");
             canWallJump = false;
             IsMoving = false;
             onWall = false;
@@ -525,7 +520,6 @@ namespace GameScene
             dashesAmount = 1;
             yield return new WaitForSeconds(0.18f);
             IsMoving = true;
-            //yield return new WaitForSeconds(wallJumpCooldown-0.18f);
 
         }
 

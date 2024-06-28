@@ -22,7 +22,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
         IsStunned = false;
     }
 
-    public void Damage(float damage, bool direction)
+    public void Damage(float damage, bool direction, AudioSource damageSound)
     {
         if (!IsStunned)
         {

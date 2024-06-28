@@ -44,10 +44,13 @@ public class Patroler : MonoBehaviour
     public float attackingTime;
     public bool canAttack;
 
+    private Player player;
+
     void Start()
     {
         Physics2D.IgnoreLayerCollision(7, 10, true);
         Player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = Player.GetComponent<Player>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         prevX = transform.position.x;
@@ -222,7 +225,7 @@ public class Patroler : MonoBehaviour
 
             if (IDamageable != null)
             {
-                IDamageable.Damage(damage,faceRight);
+                IDamageable.Damage(damage,faceRight,player.playerAudio);
             }
         }
     }

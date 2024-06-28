@@ -1,0 +1,1227 @@
+fileFormatVersion: 2
+guid: 29ede1d3591720a48a4e76c8b5e24250
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RightAttackSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a297e400a0267249b13eb2d53072161
+      internalID: 2028715404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_1
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2c48c6b81f9694ba6daefcb6983101
+      internalID: -1929396044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_2
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3adef3f5f2a9fb045ae68fe28481a599
+      internalID: -1340426943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_3
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eee491d426158845ab1310e320191c3
+      internalID: 1626256678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b781f9180dac22a49adb59f5a48f891e
+      internalID: 1055027016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e465953dbb5daad4ea5a238bd3480c23
+      internalID: -292636762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd2d15cb5134a048b34db103f43af2f
+      internalID: -420633931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_7
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcde5f53458d0842875df3fb937b415
+      internalID: 1803049794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_8
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a504682c686c77b48a2ba3e5a4dcb58b
+      internalID: 1885827574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_9
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9767d87e7e1de448ecc292658d4523
+      internalID: -518416421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2fb3416c893ff42978cee2d9e15919
+      internalID: -521593502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ce38ef379ad7046bd7f858ab7772b6
+      internalID: -389100670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4281076a41597ee4183f38fe837c40c0
+      internalID: -773608459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_13
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f93169c50a4aa54a85863a672e216e2
+      internalID: -291989738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_14
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55af18c60fd1e8146bcdcb1a4782867f
+      internalID: 110625579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_15
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe618370b42eecc4ba3912a51e281fec
+      internalID: -1541123738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 207c8929021b0354d9ff1844f86bcd89
+      internalID: -78666324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4121fc9173c1304e889cb9768a61c8d
+      internalID: 1896503480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf67e2cce7106048a97cbfb257a9fd6
+      internalID: -702647014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_19
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a02db77ccba6c243a2fed0423609624
+      internalID: 380825412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_20
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d7a067d77b652f4eacace14524b95ae
+      internalID: -284386508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_21
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5afae20706b7ccd4ab45bd7855f59aec
+      internalID: 512950174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790246303192ec94fb673e82030395e0
+      internalID: 1169014411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd13d6e6b6dec9c458f7a8883c383890
+      internalID: 761977646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13bf39789ea88d42ba8f635331760d6
+      internalID: -1169080918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_25
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1596f6344d4584fa53d3e746228ded
+      internalID: 1114194456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_26
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b39bba6f8c98ac4b84d68866a0a0e46
+      internalID: -1208162106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_27
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4490a9ce73101c44ea24c76ea8ac8efc
+      internalID: 132498367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_28
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2899cff8f4a8a2646812c68bf5411254
+      internalID: -507956172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_29
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3096e830ea307ed45b7031ed9fc52aeb
+      internalID: 1138870201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df23794bdf426f547aa879509c5ba458
+      internalID: -1428520162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_31
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72da8222528238c4a81598522c9566a8
+      internalID: -2045223650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_32
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ebfcf7997e2b14288e2bc632661c0e
+      internalID: -1831076235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_33
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8346eea97cefcd144a5b1faeb0b6a471
+      internalID: -765475904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_34
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74c70bc8b7fdc441b47d9ebb518c135
+      internalID: -803251702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_35
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406f93305e9dd12418927e833df97010
+      internalID: -1483888065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8886f296f3d2a4db82bfcd5efa8330
+      internalID: 676168590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_37
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479588f5a08335d449a47beab052d226
+      internalID: -417010287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_38
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ced1ca61582714bbe40621fe32ac48
+      internalID: -275280285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_39
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ffe690b1599444aad65ea8a5c54898
+      internalID: -1643922024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_40
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adfffea1b62d70a44a88cac6bfa44a3a
+      internalID: 643128694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_41
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54e2e5a058f0e040b2a413bfaae9c06
+      internalID: 1480293892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3a2d8af40867e8449de657baa0a9123
+      internalID: 1774631014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_43
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b414b6214223645bc063a06f97a115
+      internalID: 1078117792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_44
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d4cda0b1085484aa3a3bc2bfecaaf3
+      internalID: -1442574403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_45
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206432438403b9b478a38333a832a3de
+      internalID: -802223677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13c9d1e92da8a649b172a20308c8e3b
+      internalID: -2091798964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_47
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45822462da86ff740aae1d4fdca59002
+      internalID: 383199804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 284
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7400c472076aa234ebe9721949a778e5
+      internalID: -956346871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightAttackSheet_49
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 284
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc505e33141343e4ca1161c015e0ee67
+      internalID: 160907139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RightAttackSheet_0: 2028715404
+      RightAttackSheet_1: -1929396044
+      RightAttackSheet_10: -521593502
+      RightAttackSheet_11: -389100670
+      RightAttackSheet_12: -773608459
+      RightAttackSheet_13: -291989738
+      RightAttackSheet_14: 110625579
+      RightAttackSheet_15: -1541123738
+      RightAttackSheet_16: -78666324
+      RightAttackSheet_17: 1896503480
+      RightAttackSheet_18: -702647014
+      RightAttackSheet_19: 380825412
+      RightAttackSheet_2: -1340426943
+      RightAttackSheet_20: -284386508
+      RightAttackSheet_21: 512950174
+      RightAttackSheet_22: 1169014411
+      RightAttackSheet_23: 761977646
+      RightAttackSheet_24: -1169080918
+      RightAttackSheet_25: 1114194456
+      RightAttackSheet_26: -1208162106
+      RightAttackSheet_27: 132498367
+      RightAttackSheet_28: -507956172
+      RightAttackSheet_29: 1138870201
+      RightAttackSheet_3: 1626256678
+      RightAttackSheet_30: -1428520162
+      RightAttackSheet_31: -2045223650
+      RightAttackSheet_32: -1831076235
+      RightAttackSheet_33: -765475904
+      RightAttackSheet_34: -803251702
+      RightAttackSheet_35: -1483888065
+      RightAttackSheet_36: 676168590
+      RightAttackSheet_37: -417010287
+      RightAttackSheet_38: -275280285
+      RightAttackSheet_39: -1643922024
+      RightAttackSheet_4: 1055027016
+      RightAttackSheet_40: 643128694
+      RightAttackSheet_41: 1480293892
+      RightAttackSheet_42: 1774631014
+      RightAttackSheet_43: 1078117792
+      RightAttackSheet_44: -1442574403
+      RightAttackSheet_45: -802223677
+      RightAttackSheet_46: -2091798964
+      RightAttackSheet_47: 383199804
+      RightAttackSheet_48: -956346871
+      RightAttackSheet_49: 160907139
+      RightAttackSheet_5: -292636762
+      RightAttackSheet_6: -420633931
+      RightAttackSheet_7: 1803049794
+      RightAttackSheet_8: 1885827574
+      RightAttackSheet_9: -518416421
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

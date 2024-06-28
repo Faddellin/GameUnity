@@ -11,7 +11,7 @@ public class DeadlyArea : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Player.Damage(Player.health,Player.IsFacingRight);
+            Player.Damage(Player.health,Player.IsFacingRight,null);
         }
     }
 }

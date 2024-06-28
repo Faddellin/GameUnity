@@ -1,0 +1,1227 @@
+fileFormatVersion: 2
+guid: 60b8f2d45d07fd84ca568a0b106f7d1d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62853f7d1472bd4a9f01e4fcaee5138
+      internalID: -1114498756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_1
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e7f805d8479d548bec8019d650d0f3
+      internalID: -650038438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_2
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04fe9d06fe322624ebe1a607e231275c
+      internalID: -1716781161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_3
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b83b4e4484cbc4db659fe04cf05f1a
+      internalID: 1548445634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e720e81dba8c44599bcb5c5ac825d8
+      internalID: 417974168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1852
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 871961bd048ee8d4ea2e2d7ca4f77b49
+      internalID: -959844460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 340d45101ccf10c4a9dfcc9539a45f67
+      internalID: -1144873609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_7
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2077b8242eccf4ea4a2701dc9c6a93
+      internalID: -858882151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_8
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d9a0f3c0451834dbaa3f7fd490e032
+      internalID: 79793586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_9
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974986749d0b1ec40953219ae90eb953
+      internalID: 1365865394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8197c56d63441d4d9ab2b6b2f2f521b
+      internalID: 1349559892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_11
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1656
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4a7d2a27586e443b937550a7ffaa3c
+      internalID: -1261837692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ed37eb485a48643bf06e886337419e
+      internalID: -1727948716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_13
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40636eea05f37a4439d296b5c7ac90ed
+      internalID: 408426023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_14
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de90827b4757824aa89050c13099128
+      internalID: 1832847645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_15
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c252c178ec68e143951227fae268c49
+      internalID: -2107644235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04aa0eb8328404f47ad1f7295d2d4747
+      internalID: -2648459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1460
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aae39f9883c7864a985ea7dbb28d3c2
+      internalID: 37001348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8b724f6e6ebcf64085e83fc9861a525
+      internalID: 1838746437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_19
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125685a55caf955408915c92494f818c
+      internalID: 1895446332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_20
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112ef4456c41d2443af53c009745949c
+      internalID: 1860386229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_21
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b062e32b884f249b8453942dced61a
+      internalID: 2066249640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3521886082f881c45b5890909f6e569d
+      internalID: -2080226793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1264
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20373c6525d5dd9419fdfdbaa94b8570
+      internalID: 501210623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed8926645690f04fb547d16938d4f11
+      internalID: 1109719069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_25
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad8e120d4bcc7a4b9303881911aafea
+      internalID: 484299255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_26
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 093005b1fb8f0634ba8f908b322df68e
+      internalID: 1397915211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_27
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c6b4bfd7d7d274a92eb65d52530941
+      internalID: -984901904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_28
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9572291064426444994a24b8017b0cb2
+      internalID: -662338442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_29
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1068
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4a20a84fee49247a065234390bf13c
+      internalID: -1637118946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808df9ad65203f04b8d3bc72870e6f0e
+      internalID: -1244077263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_31
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c1eeb21e6c66d44b59b09a1b20b86e
+      internalID: 1009086772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_32
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfbc7ece33eee0499ebbd26b1e566fa
+      internalID: -981576296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_33
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29462778a07e05c48a490a036ec006b0
+      internalID: -1402201010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_34
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55085e683e331374db02160ff0f9d04d
+      internalID: 1623478596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_35
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 872
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b8b0214518978488ad65fbb455e4ac
+      internalID: 398775684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b189b2351a3b68409d9557b2e8ed350
+      internalID: 1209416898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_37
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf488a60e1443544a10c52ceb50a86f
+      internalID: -1614039995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_38
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e2beb0a40124948916ae6acffb5c5a
+      internalID: -1263924893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_39
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5870932f7e9217d4398f1b6cc585feb8
+      internalID: 1630631173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_40
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07b85cdd5db6bf42918f9f843ff3906
+      internalID: -715007636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_41
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 676
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d2af188ebd88f42904cd0d872fc574
+      internalID: 841635736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea869eb2d6419e4d9f88d7ba2125424
+      internalID: -1797926683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_43
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf19da71972311b4cab874ef644a3605
+      internalID: 147388095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_44
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d20abbdf976e51468f43d5db26911c2
+      internalID: 542500708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_45
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6fdc1074c7a9c4399a8c70d6fce409
+      internalID: 1459976746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_46
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b49e4969a377248bc880a94c3c934b
+      internalID: 604431783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_47
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 480
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d40b9b2ed99092b418e6751ef810aa50
+      internalID: 1516685486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 284
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df83aa93418251a48a4f8b37b6155d65
+      internalID: -1572222170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DefaultAttackLeftSheet_49
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 284
+        width: 324
+        height: 196
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d148bd8f4d2bd44a9e7b3bdd820bcd6
+      internalID: -1531807216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DefaultAttackLeftSheet_0: -1114498756
+      DefaultAttackLeftSheet_1: -650038438
+      DefaultAttackLeftSheet_10: 1349559892
+      DefaultAttackLeftSheet_11: -1261837692
+      DefaultAttackLeftSheet_12: -1727948716
+      DefaultAttackLeftSheet_13: 408426023
+      DefaultAttackLeftSheet_14: 1832847645
+      DefaultAttackLeftSheet_15: -2107644235
+      DefaultAttackLeftSheet_16: -2648459
+      DefaultAttackLeftSheet_17: 37001348
+      DefaultAttackLeftSheet_18: 1838746437
+      DefaultAttackLeftSheet_19: 1895446332
+      DefaultAttackLeftSheet_2: -1716781161
+      DefaultAttackLeftSheet_20: 1860386229
+      DefaultAttackLeftSheet_21: 2066249640
+      DefaultAttackLeftSheet_22: -2080226793
+      DefaultAttackLeftSheet_23: 501210623
+      DefaultAttackLeftSheet_24: 1109719069
+      DefaultAttackLeftSheet_25: 484299255
+      DefaultAttackLeftSheet_26: 1397915211
+      DefaultAttackLeftSheet_27: -984901904
+      DefaultAttackLeftSheet_28: -662338442
+      DefaultAttackLeftSheet_29: -1637118946
+      DefaultAttackLeftSheet_3: 1548445634
+      DefaultAttackLeftSheet_30: -1244077263
+      DefaultAttackLeftSheet_31: 1009086772
+      DefaultAttackLeftSheet_32: -981576296
+      DefaultAttackLeftSheet_33: -1402201010
+      DefaultAttackLeftSheet_34: 1623478596
+      DefaultAttackLeftSheet_35: 398775684
+      DefaultAttackLeftSheet_36: 1209416898
+      DefaultAttackLeftSheet_37: -1614039995
+      DefaultAttackLeftSheet_38: -1263924893
+      DefaultAttackLeftSheet_39: 1630631173
+      DefaultAttackLeftSheet_4: 417974168
+      DefaultAttackLeftSheet_40: -715007636
+      DefaultAttackLeftSheet_41: 841635736
+      DefaultAttackLeftSheet_42: -1797926683
+      DefaultAttackLeftSheet_43: 147388095
+      DefaultAttackLeftSheet_44: 542500708
+      DefaultAttackLeftSheet_45: 1459976746
+      DefaultAttackLeftSheet_46: 604431783
+      DefaultAttackLeftSheet_47: 1516685486
+      DefaultAttackLeftSheet_48: -1572222170
+      DefaultAttackLeftSheet_49: -1531807216
+      DefaultAttackLeftSheet_5: -959844460
+      DefaultAttackLeftSheet_6: -1144873609
+      DefaultAttackLeftSheet_7: -858882151
+      DefaultAttackLeftSheet_8: 79793586
+      DefaultAttackLeftSheet_9: 1365865394
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

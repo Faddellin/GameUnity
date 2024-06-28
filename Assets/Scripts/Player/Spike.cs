@@ -28,7 +28,7 @@ public class Spike : MonoBehaviour
 
     private IEnumerator Wait()
     {
-        Player.Damage(1f,!Player.IsFacingRight,null);
+        Player.Damage(1f,!Player.IsFacingRight,Player.playerAudio);
         CanDamage = false;
         yield return new WaitForSeconds(CoolDown);
         CanDamage = true;

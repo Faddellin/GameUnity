@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using GameScene;
-using Unity.PlasticSCM.Editor.WebApi;
 
 public class AimAndShoot : MonoBehaviour
 {

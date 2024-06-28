@@ -10,18 +10,34 @@ public class Run : MonoBehaviour
     private Animator animator;
 
     public float Speed;
+    public bool IsTriggered = false;
 
     private void Start()
     {
        rb = GetComponent<Rigidbody2D>();
        animator = GetComponent<Animator>();
     }
+
+    public void Update()
+    {
+        if (IsTriggered)
+        {
+            animator.SetBool("IsRight", false);
+            StartRunning();
+        }
+    }
+
     public void StartRunning()
     {
-        while (Point.position.x < transform.position.x)
+        if (Point.position.x < transform.position.x)
         {
             rb.velocity = new Vector2(-Speed, rb.velocity.y);
             animator.SetFloat("Speed", Speed);
+        }
+
+        if (Mathf.Abs(Point.position.x - transform.position.x) < 2f)
+        {
+            gameObject.SetActive(false);
         }
     }
 }

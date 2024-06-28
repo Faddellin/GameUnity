@@ -5,7 +5,7 @@ using Cinemachine;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
-using static UnityEditor.Experimental.GraphView.GraphView;
+
 
 
 namespace GameScene

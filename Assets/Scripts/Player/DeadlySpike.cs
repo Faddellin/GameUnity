@@ -28,7 +28,7 @@ public class DeadlySpike : MonoBehaviour
 
     private IEnumerator Wait()
     {
-        Player.Damage(Player.health,!Player.IsFacingRight);
+        Player.Damage(Player.health,!Player.IsFacingRight,null);
         CanDamage = false;
         yield return new WaitForSeconds(CoolDown);
         CanDamage = true;

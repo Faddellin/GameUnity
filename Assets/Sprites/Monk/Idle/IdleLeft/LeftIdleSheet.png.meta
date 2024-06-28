@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: d810afb6801f1aa45962590993673eff
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LeftIdleSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 868
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe3e4b9139169c449c6645f7451419f
+      internalID: 1840153872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 868
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14381b8020208e540996bc622c33b9b6
+      internalID: 1377535285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_2
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 868
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5e1bc29f183b24a95df50b52c90dcb
+      internalID: 939032082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_3
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 868
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34fe2738ff4be342bbd160c3e3ff31e
+      internalID: -983856970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_4
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 868
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd13138e7fc8ab94caca9caf8f7a9607
+      internalID: -584818326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 868
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec889223ec325ac4693e2d6fe62618d4
+      internalID: -1844237544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 868
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e8d6854fa49534a9afdc41ca262c53
+      internalID: 1845653510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 868
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390f9f20a22f2af4ab7cdcd158c40e81
+      internalID: -2115242974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 868
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa5bd1c79ccecd4e89269ff1ce1c39c
+      internalID: 1715479946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 712
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683a731ab26ebbc479178ec468cd936e
+      internalID: 2098645176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_10
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 712
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda8e904e7b02374187e1af22f7dad0e
+      internalID: 1391876599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_11
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 712
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736c356fec052ac4daa0aabacc54d490
+      internalID: -740272848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_12
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 712
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb95ddcbcf75384587c3ce5358d8f3f
+      internalID: 1061814413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_13
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 712
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49f0668e80111c46b02cf08edc54305
+      internalID: -1809595854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_14
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 712
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ecbada7141ed14f8846a6f935505a4
+      internalID: 1583236385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 712
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e6d2c4b0467a14f99fb2b213a23cf4
+      internalID: -1266258100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 712
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681f21707ac2f9944a0188c175cdadfa
+      internalID: 1570211178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_17
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 712
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4230920111be74d44a90aceebd20454d
+      internalID: -116839750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 556
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d261f21b625f43042b2f33da1cb5d4d1
+      internalID: 141545372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_19
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 556
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a0e8d5041e13b4da392768bb816ee2
+      internalID: 2077871618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_20
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 556
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef680ab67675ae4eb0f2ed63f74f4bf
+      internalID: 847899773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_21
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 556
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407089051ad6c9848a7e5dd7957e68e8
+      internalID: 1951749564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_22
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 556
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d0a8ec178ddb44a9739d31640ed74b
+      internalID: -2104705129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 556
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da477245aca3b2148b0180b78c14c6f4
+      internalID: 1698147931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_24
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 556
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae44ba2e7b7cbd40ab47cee6fdc72f7
+      internalID: 1622598910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_25
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 556
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab80f54eed769f4a91c25d11282c54c
+      internalID: 761565905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_26
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 556
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da24c1f46402442458cf8ac0a15b2d66
+      internalID: 585927956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9967d1982b1748b4f8fab3f0517fddae
+      internalID: -818920031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_28
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 400
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3218a13e004c48041a2fdb2324513e8e
+      internalID: 660441648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_29
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 400
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398cccc5a5cfba04db0553597459025a
+      internalID: -463994845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_30
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 400
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee94b6ce888491d4abbe52a7a381a9b3
+      internalID: -551183434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_31
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 400
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08f066fa13c7c243915227fb5de91a2
+      internalID: -294004927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_32
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 400
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad226bd19778854f9a48ee470f25571
+      internalID: -1506607633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_33
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 400
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c873caf4ca261459ed85bbdffa668d
+      internalID: 814506760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftIdleSheet_34
+      rect:
+        serializedVersion: 2
+        x: 1568
+        y: 400
+        width: 224
+        height: 156
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959d3f0c85f7f244ba0cadfe34a51267
+      internalID: -245417943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      LeftIdleSheet_0: 1840153872
+      LeftIdleSheet_1: 1377535285
+      LeftIdleSheet_10: 1391876599
+      LeftIdleSheet_11: -740272848
+      LeftIdleSheet_12: 1061814413
+      LeftIdleSheet_13: -1809595854
+      LeftIdleSheet_14: 1583236385
+      LeftIdleSheet_15: -1266258100
+      LeftIdleSheet_16: 1570211178
+      LeftIdleSheet_17: -116839750
+      LeftIdleSheet_18: 141545372
+      LeftIdleSheet_19: 2077871618
+      LeftIdleSheet_2: 939032082
+      LeftIdleSheet_20: 847899773
+      LeftIdleSheet_21: 1951749564
+      LeftIdleSheet_22: -2104705129
+      LeftIdleSheet_23: 1698147931
+      LeftIdleSheet_24: 1622598910
+      LeftIdleSheet_25: 761565905
+      LeftIdleSheet_26: 585927956
+      LeftIdleSheet_27: -818920031
+      LeftIdleSheet_28: 660441648
+      LeftIdleSheet_29: -463994845
+      LeftIdleSheet_3: -983856970
+      LeftIdleSheet_30: -551183434
+      LeftIdleSheet_31: -294004927
+      LeftIdleSheet_32: -1506607633
+      LeftIdleSheet_33: 814506760
+      LeftIdleSheet_34: -245417943
+      LeftIdleSheet_4: -584818326
+      LeftIdleSheet_5: -1844237544
+      LeftIdleSheet_6: 1845653510
+      LeftIdleSheet_7: -2115242974
+      LeftIdleSheet_8: 1715479946
+      LeftIdleSheet_9: 2098645176
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

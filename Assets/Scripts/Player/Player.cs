@@ -526,6 +526,10 @@ namespace GameScene
         {
             if(onWall && !onGround && !damaged)
             {
+                if (extraJumps == 0)
+                {
+                    extraJumps = 1;
+                }
                 wallSlideParticle.Play();
                 rb.gravityScale = 0;
                 rb.velocity = new Vector2(rb.velocity.x,-slideSpeed);

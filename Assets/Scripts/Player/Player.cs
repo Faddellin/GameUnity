@@ -529,6 +529,7 @@ namespace GameScene
                 if (extraJumps == 0)
                 {
                     extraJumps = 1;
+                    dashesAmount = 1;
                 }
                 wallSlideParticle.Play();
                 rb.gravityScale = 0;

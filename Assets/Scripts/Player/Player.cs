@@ -494,8 +494,6 @@ namespace GameScene
         {
             onWall = (Physics2D.OverlapBox(wallCheckUp.position, boxSize, angle, Wall) && Physics2D.OverlapBox(wallCheckDown.position, boxSize, angle, Wall));
             animator.SetBool("OnWall", onWall);
-            extraJumps = 1;
-            dashesAmount = 1;
         }
 
         private IEnumerator WallJump()

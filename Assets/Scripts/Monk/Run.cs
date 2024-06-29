@@ -7,7 +7,7 @@ public class Run : MonoBehaviour
 {
     public Transform Point;
     private Rigidbody2D rb;
-    private Animator animator;
+    public Animator animator;
 
     public float Speed;
     public bool IsTriggered = false;

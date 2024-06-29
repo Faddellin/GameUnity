@@ -21,6 +21,10 @@ public class TriggerAudio : MonoBehaviour
             if (IsBoss)
             {
                 Boss.SetActive(true);
+                Monk.IsTriggered = false;
+                Monk.gameObject.SetActive(true);
+                Monk.transform.position = new Vector2(-425f, 5f);
+                Monk.animator.SetBool("IsRight", true);
             }
             if (IsMonk)
             {

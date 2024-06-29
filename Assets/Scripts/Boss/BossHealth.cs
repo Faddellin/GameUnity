@@ -10,8 +10,9 @@ public class BossHealth : MonoBehaviour,IDamageable
 {
     public float maxHealth;
     public float currentHealth;
-    
+    public LastCut Cut;
 
+    
     [SerializeField]private Player player;
     private Animator animator;
     private AudioSource armorAudio;
@@ -84,6 +85,7 @@ public class BossHealth : MonoBehaviour,IDamageable
 
     public void Die()
     {
+        Cut.StartEnding();
         Destroy(gameObject);
     }
 

@@ -4,7 +4,7 @@
 
 Проект представляет из себя 2Д платформер с боями. В игре реализована необычная система паркура и управления персонажем при помощи курсора.
 
-Трейлер игры можно посмотреть [тут](https://drive.google.com/drive/my-drive)
+Трейлер игры можно посмотреть [тут](https://drive.google.com/file/d/1MwdpUnYAiJy-gb6ygjWjqLRqbT2VGYBn/view?usp=sharing)
 
 ## Команда проекта
 - [Беловодченко Кирилл](https://github.com/Faddellin)
